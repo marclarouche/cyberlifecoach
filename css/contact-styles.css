@@ -1,0 +1,205 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Container for consistent page width */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header styling (matches your site) */
+  header {
+    background-color: #060606;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links li {
+    margin-left: 20px;
+    font-size: 1.3rem;
+}
+.nav-links a:hover {
+  color: #f0a500;
+}
+  header .logo img {
+    height: 40px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Hero Section */
+  .contact-hero {
+    background: url("../images/contact-hero.jpg") center/cover no-repeat; /* Example background image */
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #333; /* fallback if no image */
+  }
+  
+  .contact-hero .hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    display: inline-block;
+    max-width: 700px;
+  }
+  
+  .contact-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Contact Form Section */
+  .contact-form-section {
+    padding: 2rem 0;
+  }
+  
+  .contact-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+  }
+  
+  .contact-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .required {
+    color: red;
+    margin-left: 0.2rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+  
+  .captcha-section {
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-btn {
+    margin-top: 1rem;
+  }
+  
+  /* Confirmation Message */
+  .form-confirmation {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #c8e6c9;
+    background-color: #dcedc8;
+    border-radius: 4px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #060606;
+    color: #fff;
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  .footer-links {
+    margin: 20px 0;
+}
+  .footer-links,
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-links a,
+  .social-icons a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  

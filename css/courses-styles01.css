@@ -1,0 +1,199 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Container for consistent page width */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header styling (mirrors your site’s design) */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem 0;
+  }
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header .logo img {
+    height: 50px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* Hero / Intro Section */
+  .courses-hero {
+    background: url("../images/courses-hero.jpg") center/cover no-repeat; /* Example background image */
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #333; /* fallback if no image is used */
+  }
+  
+  .courses-hero .hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* overlay effect if using a background image */
+    padding: 2rem;
+    display: inline-block;
+    max-width: 700px;
+  }
+  
+  .courses-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .courses-hero p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  
+  /* Courses Listing Section */
+  .courses-listing {
+    padding: 2rem 0;
+  }
+  
+  .courses-listing h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+  }
+  
+  .course-card {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+  
+  .course-card img {
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    object-fit: cover;
+  }
+  
+  .course-info {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .course-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .course-description {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .course-price {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* CTA Section */
+  .courses-cta {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .courses-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .courses-cta p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .secondary-btn {
+    background-color: #fff;
+    color: #007bff;
+  }
+  
+  .secondary-btn:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Footer styling */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-links,
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .footer-links a,
+  .social-icons a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  

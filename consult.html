@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Schedule a Free Consult - CyberLifeCoach</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons (optional) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnH1z7L+RZ1Q0YH3DXqMhk0svLJ0tEERx6aKqRdSclq8R+53y2pQeUTcE3Kk5f1BSnURCj1RQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <!-- Calendly Inline Widget CSS (optional, can help with Calendly widget styling) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  
+  <style>
+    /* Basic styling for the consult page */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #004080;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .consult-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .consult-container h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Calendly widget container */
+    .calendly-container {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>CyberLifeCoach</h1>
+  </header>
+
+  <div class="consult-container">
+    <!-- Optional: Link back to the main page -->
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+
+    <h2>Schedule a Free Consult</h2>
+    <p>
+      Welcome to your personalized consultation! Please use the calendar below to book a time that works best for you.
+      We’ll discuss your cybersecurity goals, challenges, and how CyberLifeCoach can help you thrive in a secure digital world.
+    </p>
+    
+    <!-- Calendly Embed Container -->
+    <div class="calendly-container">
+      <!-- Replace YOUR_CALENDLY_USERNAME with your actual Calendly link -->
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/cyberlifecoach-proton"
+        style="min-width:320px; height:650px;"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Calendly Inline Widget JavaScript -->
+  <script
+    type="text/javascript"
+    src="https://assets.calendly.com/assets/external/widget.js"
+    async
+  ></script>
+</body>
+</html>

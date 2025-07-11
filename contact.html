@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberLifeCoach - Contact Us</title>
+  <!-- Link to your contact-specific CSS (or main CSS) -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Optional Google Fonts / Font Awesome for icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha512-Fo3rlrZj/k7ujTnH1z7L+RZ1Q0YH3DXqMhk0svLJ0tEERx6aKqRdSclq8R+53y2pQeUTcE3Kk5f1BSnURCj1RQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Header Section (mirrors your main site) -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="images/CyberLifeCoachLogo.jpg" alt="CyberLifeCoach Logo"></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="assessments.html">Assessments</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#subscription">Subscribe</a></li>
+          <li><a href="library.html">Library</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="courses.html">Courses</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Intro Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Contact CyberLifeCoach</h1>
+      <p>Have questions or need assistance? Click Get Started below.</p>
+   
+    <div class="cta-buttons">
+      <a href="consult.html" class="btn primary-btn">Get Started</a>
+  </div>
+</div>
+  </section>
+
+ <!-- ================== CyberLifeCoach Contact Form Start ================== -->
+ <section class="contact-form-section cyberlife-contact-form-section">
+  <div class="container cyberlife-form-wrapper">
+    <!-- Form Title -->
+    <h2 class="cyberlife-form-title">Contact Your CyberLife Coach</h2>
+
+    <!-- Contact Form -->
+    <form class="contact-form cyberlife-contact-form" action="#" method="POST" onsubmit="return validateForm()">
+      <!-- Name Field -->
+      <div class="form-group">
+        <label for="name">
+          Name <span class="required" style="color: red;">*</span>
+        </label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          placeholder="Enter your full name"
+        />
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-group">
+        <label for="email">
+          Email <span class="required" style="color: red;">*</span>
+        </label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="Enter your email address"
+        />
+      </div>
+
+      <!-- Subject Field -->
+      <div class="form-group">
+        <label for="subject">
+          Subject <span class="required" style="color: red;">*</span>
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          placeholder="Enter the subject"
+        />
+      </div>
+
+      <!-- Message Field -->
+      <div class="form-group">
+        <label for="message">
+          Message <span class="required" style="color: red;">*</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Type your message here"
+          rows="6"
+        ></textarea>
+      </div>
+
+      <!-- CAPTCHA Placeholder -->
+      <div class="form-group captcha-section">
+        <!-- Replace with actual Google reCAPTCHA or other CAPTCHA widget -->
+        <p>[CAPTCHA Placeholder]</p>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn submit-btn">
+        Send Message
+      </button>
+    </form>
+    <!-- End Contact Form -->
+
+    <!-- Confirmation Message (hidden by default) -->
+    <div id="formConfirmation" class="form-confirmation hidden">
+      <p>Thank you! Your message has been sent successfully.</p>
+    </div>
+  </div>
+</section>
+<!-- ================== CyberLifeCoach Contact Form End ================== -->
+
+<!-- Optional JavaScript for form validation -->
+<script>
+  function validateForm() {
+    // Example placeholder for JS validation logic.
+    // Return false to prevent submission if checks fail.
+    return true;
+  }
+</script>
+
+  <!-- Footer Section (mirrors your main site) -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        <a href="index.html"><img src="images/CyberLifeCoachLogo.jpg" alt="CyberLifeCoach Logo"></a>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p>&copy; 2025 CyberLifeCoach. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Google reCAPTCHA Script (if you're using v2) -->
+  <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+
+  <!-- Optional JavaScript: Form Validation (client-side) -->
+  <script>
+    function validateForm() {
+      // Basic validation (HTML 'required' handles most)
+      // Additional custom checks can be placed here
+
+      // Example check for name length:
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all required fields.');
+        return false;
+      }
+
+      // If using reCAPTCHA, also validate the token or checkbox
+      // e.g., if (grecaptcha.getResponse() === "") { ... }
+
+      // If everything is okay, proceed
+      // In a real scenario, you'd do more robust validation or let server handle it
+      return true;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        .sub-section {
+            margin-left: 20px;
+        }
+        /* Style for the Print Button */
+        .print-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2c3e50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-btn {
+            text-align: center;
+            margin-top: 20px;
+        } 
+        .print-button:hover {
+            background-color: #1f6391;
+        }
+        button:hover {
+            background: #1f6391;
+        }
+        /* Hide the print button when printing */
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+
+                       /* New Header Styles */
+                       header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        header .logo:hover {
+         color: #1f6391; /* Hover color */
+        }
+
+        nav ul {
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            list-style: none;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #27ae60;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+        <!-- Header Section -->
+        <header>
+            <nav>
+            <a href="index.html" class="logo">CyberLifeCoach</a>
+            </nav>
+        </header>
+        <!-- End of Header Section -->
+
+    <!-- Print Button -->
+    <button class="print-button" onclick="window.print()">📄 Print Checklist</button>
+
+    <div class="section">
+        <h1>GDPR Compliance Checklist</h1>
+
+        <h3>1. Lawfulness, Fairness, and Transparency</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="lawful-basis">
+                <label for="lawful-basis"><strong>Obtain Lawful Basis for Data Processing:</strong> Ensure you have a valid reason (e.g., consent, contract) to process personal data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="be-transparent">
+                <label for="be-transparent"><strong>Be Transparent:</strong> Clearly inform users how their data is collected, used, and stored.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="avoid-unnecessary-collection">
+                <label for="avoid-unnecessary-collection"><strong>Avoid Unnecessary Data Collection:</strong> Only collect data that is essential for your specified purposes.</label>
+            </li>
+        </ul>
+
+        <h3>2. Purpose Limitation</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="define-data-purposes">
+                <label for="define-data-purposes"><strong>Define Clear Data Purposes:</strong> Specify why you are collecting each piece of personal data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="document-justifications">
+                <label for="document-justifications"><strong>Document Justifications:</strong> Keep records that explain the necessity of data collection for intended purposes.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="prevent-unauthorized-use">
+                <label for="prevent-unauthorized-use"><strong>Prevent Unauthorized Use:</strong> Ensure data is not used for purposes beyond what was initially stated.</label>
+            </li>
+        </ul>
+
+        <h3>3. Data Minimization</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="collect-necessary-data">
+                <label for="collect-necessary-data"><strong>Collect Only Necessary Data:</strong> Gather the minimum amount of personal data required for your services.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="ensure-relevance">
+                <label for="ensure-relevance"><strong>Ensure Relevance:</strong> Verify that each data point collected is relevant to your operations.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="limit-data-retention">
+                <label for="limit-data-retention"><strong>Limit Data Retention:</strong> Do not retain personal data longer than necessary for its intended purpose.</label>
+            </li>
+        </ul>
+
+        <h3>4. Accuracy</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="maintain-data-accuracy">
+                <label for="maintain-data-accuracy"><strong>Maintain Data Accuracy:</strong> Regularly update and verify personal data to keep it accurate and current.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="allow-data-correction">
+                <label for="allow-data-correction"><strong>Allow Data Correction:</strong> Provide users the ability to correct or update their personal information.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="implement-verification-steps">
+                <label for="implement-verification-steps"><strong>Implement Verification Steps:</strong> Use appropriate measures to confirm the accuracy of the data collected.</label>
+            </li>
+        </ul>
+
+        <h3>5. Storage Limitation</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="set-retention-periods">
+                <label for="set-retention-periods"><strong>Set Retention Periods:</strong> Define how long personal data will be stored based on its purpose.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="regularly-review-data">
+                <label for="regularly-review-data"><strong>Regularly Review Data:</strong> Periodically assess stored data and delete or anonymize what is no longer needed.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="comply-legal-requirements">
+                <label for="comply-legal-requirements"><strong>Comply with Legal Requirements:</strong> Retain data for longer periods only if legally mandated.</label>
+            </li>
+        </ul>
+
+        <h3>6. Integrity and Confidentiality (Security)</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="implement-data-security">
+                <label for="implement-data-security"><strong>Implement Data Security Measures:</strong> Use encryption, secure servers, and other technologies to protect personal data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="control-access">
+                <label for="control-access"><strong>Control Access:</strong> Restrict data access to authorized personnel only.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="prepare-data-breaches">
+                <label for="prepare-data-breaches"><strong>Prepare for Data Breaches:</strong> Have protocols in place to detect, report, and manage data breaches within 72 hours.</label>
+            </li>
+        </ul>
+
+        <h3>7. Accountability</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="appoint-dpo">
+                <label for="appoint-dpo"><strong>Appoint a Data Protection Officer (DPO):</strong> Designate a responsible person to oversee GDPR compliance.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="maintain-compliance-records">
+                <label for="maintain-compliance-records"><strong>Maintain Compliance Records:</strong> Keep detailed records of data processing activities and compliance measures.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="conduct-regular-audits">
+                <label for="conduct-regular-audits"><strong>Conduct Regular Audits:</strong> Periodically review and assess your data protection practices.</label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Individuals’ Rights under GDPR</h2>
+
+        <h3>1. Right to be Informed</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="provide-clear-information">
+                <label for="provide-clear-information"><strong>Provide Clear Information:</strong> Inform users about data collection, purposes, and their rights.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="update-privacy-notices">
+                <label for="update-privacy-notices"><strong>Update Privacy Notices:</strong> Ensure privacy policies are easily accessible and up-to-date.</label>
+            </li>
+        </ul>
+
+        <h3>2. Right of Access</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="enable-data-requests">
+                <label for="enable-data-requests"><strong>Enable Data Requests:</strong> Allow users to request and obtain a copy of their personal data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="respond-promptly">
+                <label for="respond-promptly"><strong>Respond Promptly:</strong> Provide requested data within one calendar month without charging a fee.</label>
+            </li>
+        </ul>
+
+        <h3>3. Right to Rectification</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="allow-data-corrections">
+                <label for="allow-data-corrections"><strong>Allow Data Corrections:</strong> Let users correct inaccurate or incomplete personal data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="implement-update-procedures">
+                <label for="implement-update-procedures"><strong>Implement Update Procedures:</strong> Have processes in place to amend data upon user request within one month.</label>
+            </li>
+        </ul>
+
+        <h3>4. Right to Erasure (Right to be Forgotten)</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="delete-data-request">
+                <label for="delete-data-request"><strong>Delete Data Upon Request:</strong> Remove personal data when it is no longer needed or consent is withdrawn.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="respect-exemptions">
+                <label for="respect-exemptions"><strong>Respect Exemptions:</strong> Retain data only if required by law or for legitimate interests.</label>
+            </li>
+        </ul>
+
+        <h3>5. Right to Restrict Processing</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="limit-data-usage">
+                <label for="limit-data-usage"><strong>Limit Data Usage:</strong> Allow users to restrict how their personal data is processed.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="notify-third-parties">
+                <label for="notify-third-parties"><strong>Notify Third Parties:</strong> Inform any data recipients about the restrictions imposed by the user.</label>
+            </li>
+        </ul>
+
+        <h3>6. Right to Data Portability</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="facilitate-data-transfer">
+                <label for="facilitate-data-transfer"><strong>Facilitate Data Transfer:</strong> Enable users to obtain and transfer their personal data to other services.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="ensure-data-compatibility">
+                <label for="ensure-data-compatibility"><strong>Ensure Data Compatibility:</strong> Provide data in a structured, commonly used, and machine-readable format.</label>
+            </li>
+        </ul>
+
+        <h3>7. Right to Object</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="honor-objections">
+                <label for="honor-objections"><strong>Honor Objections:</strong> Respect users’ requests to stop processing their personal data for specific purposes, such as marketing.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="provide-clear-optout">
+                <label for="provide-clear-optout"><strong>Provide Clear Opt-Out Options:</strong> Make it easy for users to object to data processing.</label>
+            </li>
+        </ul>
+
+        <h3>8. Rights Related to Automated Decision Making and Profiling</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="inform-automated-decisions">
+                <label for="inform-automated-decisions"><strong>Inform About Automated Decisions:</strong> Clearly disclose any automated decision-making processes involving user data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="provide-human-intervention">
+                <label for="provide-human-intervention"><strong>Provide Human Intervention:</strong> Allow users to request human review or challenge automated decisions.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="regularly-review-systems">
+                <label for="regularly-review-systems"><strong>Regularly Review Automated Systems:</strong> Ensure automated processing complies with GDPR and functions as intended.</label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Additional Best Practices</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="conduct-dpias">
+                <label for="conduct-dpias"><strong>Conduct Data Protection Impact Assessments (DPIAs):</strong> Regularly assess and mitigate risks related to data processing activities.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="train-staff">
+                <label for="train-staff"><strong>Train Staff on GDPR Compliance:</strong> Ensure all team members understand their roles in protecting personal data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="implement-privacy-framework">
+                <label for="implement-privacy-framework"><strong>Implement a Privacy Management Framework:</strong> Establish comprehensive policies and procedures to maintain ongoing GDPR compliance.</label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>How to Use This Checklist</h2>
+        <ul>
+            <li><strong>Review Regularly:</strong> Schedule periodic reviews of each checklist item to ensure continuous compliance.</li>
+            <li><strong>Assign Responsibilities:</strong> Designate team members responsible for each compliance task.</li>
+            <li><strong>Update as Needed:</strong> Modify the checklist to reflect changes in your data processing activities or GDPR updates.</li>
+        </ul>
+    </div>
+
+    <!-- JavaScript for Saving Checkbox States and Print Functionality -->
+    <script>
+        // Function to load checkbox states from localStorage
+        function loadCheckboxStates() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const checked = localStorage.getItem(checkbox.id) === 'true';
+                checkbox.checked = checked;
+            });
+        }
+
+        // Function to save checkbox states to localStorage
+        function saveCheckboxState(event) {
+            const checkbox = event.target;
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        }
+
+        // Attach event listeners to all checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', saveCheckboxState);
+        });
+
+        // Load checkbox states on page load
+        window.onload = loadCheckboxStates;
+    </script>
+    <footer>
+        <!-- Your website footer or contact info -->
+        <p>© 2025 Cyber Life Coach. All rights reserved.</p>
+      </footer>
+   <div class="print-btn">
+    <button class="btn" onclick="window.print();">Print Checklist</button>
+   </div>
+</body>
+</html>

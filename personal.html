@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Cybersecurity Assessment - CyberLifeCoach</title>
+  
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="css/assessment-styles.css">
+  
+  <!-- Optional: Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Optional: Favicon -->
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+  
+  <!-- Header Section -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">CyberLifeCoach</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <!-- Mobile Menu Icon -->
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <section id="assessment">
+      <div class="container">
+        <h1>Personal Cybersecurity Assessment</h1>
+        <p>Please answer the following questions to assess your current cybersecurity posture.</p>
+        
+        <form id="cybersecurity-assessment" action="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE" method="POST">
+          
+          <!-- Contact Information -->
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="Email" required placeholder="youremail@example.com">
+          </div>
+          
+          <!-- Section 1: Antivirus and Firewall -->
+          <fieldset>
+            <legend>Antivirus and Firewall</legend>
+            
+            <div class="form-group">
+              <label>1. Antivirus software installed</label>
+              <label><input type="radio" name="Antivirus software installed" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Antivirus software installed" value="No"> No</label>
+            </div>
+            
+            <div class="form-group">
+              <label>2. Regular antivirus scans</label>
+              <label><input type="radio" name="Regular antivirus scans" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Regular antivirus scans" value="No"> No</label>
+            </div>
+            
+            <div class="form-group">
+              <label>3. Firewall enabled</label>
+              <label><input type="radio" name="Firewall enabled" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Firewall enabled" value="No"> No</label>
+            </div>
+            
+          </fieldset>
+          
+          <!-- Section 2: Authentication and Access Control -->
+          <fieldset>
+            <legend>Authentication and Access Control</legend>
+            
+            <div class="form-group">
+              <label>4. Hardware security keys</label>
+              <label><input type="radio" name="Hardware security keys" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Hardware security keys" value="No"> No</label>
+            </div>
+            
+            <div class="form-group">
+              <label>5. Regular software updates</label>
+              <label><input type="radio" name="Regular software updates" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Regular software updates" value="No"> No</label>
+            </div>
+            
+            <div class="form-group">
+              <label>6. Important file encryption</label>
+              <label><input type="radio" name="Important file encryption" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Important file encryption" value="No"> No</label>
+            </div>
+            
+            <!-- Add more questions similarly -->
+            
+            <!-- Example of adding multiple questions -->
+            <div class="form-group">
+              <label>7. Ransomware protection</label>
+              <label><input type="radio" name="Ransomware protection" value="Yes" required> Yes</label>
+              <label><input type="radio" name="Ransomware protection" value="No"> No</label>
+            </div>
+            
+            <!-- Continue adding all 47 questions in similar fashion -->
+            
+            <!-- ... -->
+            
+          </fieldset>
+          
+          <!-- You can create more fieldsets for different sections -->
+          
+          <!-- Submit Button -->
+          <div class="form-group">
+            <button type="submit" class="submit-btn">Submit Assessment</button>
+          </div>
+          
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 CyberLifeCoach. All rights reserved.</p>
+      <ul class="social-links">
+        <li><a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a></li>
+        <li><a href="#"><img src="images/linkedin-icon.png" alt="LinkedIn"></a></li>
+        <!-- Add Other Social Media Links Here -->
+      </ul>
+    </div>
+  </footer>
+  
+  <!-- JavaScript for Mobile Menu -->
+  <script src="js/scripts.js"></script>
+  
+</body>
+</html>

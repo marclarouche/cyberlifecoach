@@ -1,0 +1,148 @@
+/* Compliance Navigator Section Styles
+   ======================================== */
+   .compliance-nav {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .compliance-nav h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .compliance-nav p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid Layout */
+  .compliance-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Card (similar to product-card) */
+  .compliance-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .compliance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Optional image or icon at the top of each card */
+  .compliance-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Title inside the card */
+  .compliance-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Text inside the card */
+  .compliance-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons inside the card (matches product card .btn) */
+  .compliance-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* ensures the button is at the bottom if content expands */
+  }
+  
+  .compliance-card .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Checklist styling (optional if you want the checkboxes in a card) */
+  .compliance-checklist {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .compliance-checklist label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  
+  .compliance-checklist input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* Progress bar styling (optional if you want a progress feature) */
+  .progress-container {
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .progress-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .progress-bar-bg {
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .progress-bar-fill {
+    background-color: #007bff;
+    height: 100%;
+    width: 30%; /* example default width */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-percentage {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .compliance-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .compliance-card {
+      width: 90%;
+    }
+  }
+  

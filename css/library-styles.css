@@ -1,0 +1,166 @@
+/* Base resets and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  /* If your other pages have a consistent text color, set it here, e.g. */
+  color: #333; /* optional */
+}
+
+/* Container for consistent padding */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER STYLING (MATCH TO OTHER PAGES) */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+/* If your other pages use a class like .container inside the header */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo example (adapt as needed) */
+header .logo img {
+  height: 50px;
+}
+
+/* NAVIGATION */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 1rem; /* optional if needed */
+}
+
+header nav a {
+  color: #fff;  /* Ensure top links are white like other pages */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Add an .active style if your other pages do this for the current page link */
+header nav a.active {
+  text-decoration: underline;
+}
+
+/* HERO/INTRO SECTION */
+.library-hero {
+  background: url("../images/library-hero.jpg") center/cover no-repeat; /* Example background */
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+  background-color: #333; /* fallback color if no image is found */
+}
+
+.library-hero .container {
+  background-color: rgba(0, 0, 0, 0.5); /* overlay effect if using a background image */
+  padding: 2rem;
+}
+
+.library-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.library-hero p {
+  font-size: 1.2rem;
+}
+
+/* SECTIONS */
+section {
+  padding: 2rem 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #ccc;
+  display: inline-block;
+}
+
+/* RESOURCE ITEMS */
+.resource-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.resource-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.resource-item p {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.resource-item a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.resource-item a:hover {
+  background-color: #0056b3;
+}
+
+/* FOOTER STYLING (MATCH YOUR OTHER PAGES) */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .footer-logo img {
+  height: 40px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-links,
+footer .social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .footer-links a,
+footer .social-icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}

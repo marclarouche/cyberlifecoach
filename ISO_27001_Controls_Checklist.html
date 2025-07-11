@@ -1,0 +1,1333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISO 27001:2022 Controls Checklist</title>
+    <style>
+       /* Existing Styles */
+       body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 10px 20px;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #1f6391;
+        }
+        @media print {
+            button {
+                display: none;
+            }
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        header .logo:hover {
+         color: #1f6391; /* Hover color */
+        }
+
+        nav ul {
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            list-style: none;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #27ae60;
+        }
+
+        /* Responsive Navigation */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+
+/* end of header style* feb 11*/
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .download-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .download-btn button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .print-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .print-btn button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- Header Section -->
+        <header>
+            <nav>
+            <a href="index.html" class="logo">CyberLifeCoach</a>
+            </nav>
+        </header>
+        <!-- End of Header Section -->
+
+    <h2>ISO 27001:2022 Controls Checklist</h2>
+    <table>
+        <tr>
+            <th>Control Number</th>
+            <th>Control Name</th>
+            <th>Purpose/Objective</th>
+            <th>Implementation</th>
+            <th>Compliance</th>
+            <th>Assigned To</th>
+            <th>Evidence</th>
+            <th>Review Date</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>5.0</td>
+            <td></td>
+            <td><span style="font-weight: bold;">Organizational Controls</span></td>
+            <td><select><option value="Planning"selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td>Auditor or Team</td>
+            <td>Loc. of evidence</td>
+            <td>Date:</td>
+            <td>Addit. Info</td>
+        </tr>
+
+        <tr>
+            <td>5.1</td>
+            <td>Policies for information security</td>
+            <td>Information security policy and topic-specific policies shall be defined, approved by management, published, communicated to and acknowledged by relevant personnel and relevant interested parties, and reviewed at planned intervals and if significant changes occur.</td>
+            <td><select><option value="Planning"selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.2</td>
+            <td>Information security roles and responsibilities</td>
+            <td>Information security roles and responsibilities shall be defined and allocated according to the organization needs.</td>
+            <td><select><option value="Planning"selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.3</td>
+            <td>Segregation of duties</td>
+            <td>Conflicting duties and conflicting areas of responsibility shall be segregated.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.4</td>
+            <td>Management responsibilities</td>
+            <td>Management shall require all personnel to apply information security in accordance with the established information security policy, topic-specific policies and procedures of the organization.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.5</td>
+            <td>Contact with authorities</td>
+            <td>The organization shall establish and maintain contact with relevant authorities.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.6</td>
+            <td>Contact with special interest groups</td>
+            <td>The organization shall establish and maintain contact with special interest groups or other specialist security forums and professional associations.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.7</td>
+            <td>Threat intelligence</td>
+            <td>Information relating to information security threats shall be collected and analysed to produce threat intelligence.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.8</td>
+            <td>Information security in project management</td>
+            <td>Information security shall be integrated into project management.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.9</td>
+            <td>Inventory of information and other associated assets</td>
+            <td>An inventory of information and other associated assets, including owners, shall be developed and maintained.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.1</td>
+            <td>Acceptable use of information and other associated assets</td>
+            <td>Rules for the acceptable use and procedures for handling information and other associated assets shall be identified, documented and implemented.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.11</td>
+            <td>Return of assets</td>
+            <td>Personnel and other interested parties as appropriate shall return all the organization’s assets in their possession upon change or termination of their employment, contract or agreement.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.12</td>
+            <td>Classification of information</td>
+            <td>Information shall be classified according to the information security needs of the organization based on confidentiality, integrity, availability and relevant interested party requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.13</td>
+            <td>Labelling of information</td>
+            <td>An appropriate set of procedures for information labelling shall be developed and implemented in accordance with the information classification scheme adopted by the organization.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.14</td>
+            <td>Information transfer</td>
+            <td>Information transfer rules, procedures, or agreements shall be in place for all types of transfer facilities within the organization and between the organization and other parties.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.15</td>
+            <td>Access control</td>
+            <td>Rules to control physical and logical access to information and other associated assets shall be established and implemented based on business and information security requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.16</td>
+            <td>Identity management</td>
+            <td>The full life cycle of identities shall be managed.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.17</td>
+            <td>Authentication information</td>
+            <td>Allocation and management of authentication information shall be controlled by a management process, including advising personnel on appropriate handling of authentication information.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.18</td>
+            <td>Access rights</td>
+            <td>Access rights to information and other associated assets shall be provisioned, reviewed, modified and removed in accordance with the organization’s topic-specific policy on and rules for access control.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.19</td>
+            <td>Information security in supplier relationships</td>
+            <td>Processes and procedures shall be defined and implemented to manage the information security risks associated with the use of supplier’s products or services.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.2</td>
+            <td>Addressing information security within supplier agreements</td>
+            <td>Relevant information security requirements shall be established and agreed with each supplier based on the type of supplier relationship.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.21</td>
+            <td>Managing information security in the information and communication technology (ICT) supply chain</td>
+            <td>Processes and procedures shall be defined and implemented to manage the information security risks associated with the ICT products and services supply chain.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.22</td>
+            <td>Monitoring, review and change management of supplier services</td>
+            <td>The organization shall regularly monitor, review, evaluate and manage change in supplier information security practices and service delivery.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.23</td>
+            <td>Information security for use of cloud services</td>
+            <td>Processes for acquisition, use, management and exit from cloud services shall be established in accordance with the organization’s information security requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.24</td>
+            <td>Information security incident management planning and preparation</td>
+            <td>The organization shall plan and prepare for managing information security incidents by defining, establishing and communicating information security incident management processes, roles and responsibilities.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.25</td>
+            <td>Assessment and decision on information security events</td>
+            <td>The organization shall assess information security events and decide if they are to be categorized as information security incidents.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.26</td>
+            <td>Response to information security incidents</td>
+            <td>Information security incidents shall be responded to in accordance with the documented procedures.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.27</td>
+            <td>Learning from information security incidents</td>
+            <td>Knowledge gained from information security incidents shall be used to strengthen and improve the information security controls.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.28</td>
+            <td>Collection of evidence</td>
+            <td>The organization shall establish and implement procedures for the identification, collection, acquisition and preservation of evidence related to information security events.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.29</td>
+            <td>Information security during disruption</td>
+            <td>The organization shall plan how to maintain information security at an appropriate level during disruption.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.3</td>
+            <td>ICT readiness for business continuity</td>
+            <td>ICT readiness shall be planned, implemented, maintained and tested based on business continuity objectives and ICT continuity requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.31</td>
+            <td>Legal, statutory, regulatory and contractual requirements</td>
+            <td>Legal, statutory, regulatory and contractual requirements relevant to information security and the organization’s approach to meet these requirements shall be identified, documented and kept up to date.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.32</td>
+            <td>Intellectual property rights</td>
+            <td>The organization shall implement appropriate procedures to protect intellectual property rights.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.33</td>
+            <td>Protection of records</td>
+            <td>Records shall be protected from loss, destruction, falsification, unauthorized access and unauthorized release.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.34</td>
+            <td>Privacy and protection of personal identifiable information (PII)</td>
+            <td>The organization shall identify and meet the requirements regarding the preservation of privacy and protection of PII according to applicable laws and regulations and contractual requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.35</td>
+            <td>Independent review of information security</td>
+            <td>The organization’s approach to managing information security and its implementation including people, processes and technologies shall be reviewed independently at planned intervals, or when significant changes occur.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.36</td>
+            <td>Compliance with policies, rules and standards for information security</td>
+            <td>Compliance with the organization’s information security policy, topic-specific policies, rules and standards shall be regularly reviewed.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>5.37</td>
+            <td>Documented operating procedures</td>
+            <td>Operating procedures for information processing facilities shall be documented and made available to personnel who need them.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.0</td>
+            <td></td>
+            <td><span style="font-weight: bold;">People Controls</span></td>
+            <td><select><option value="Planning">Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td>Auditor or Team</td>
+            <td>Loc. of evidence</td>
+            <td>Date:</td>
+            <td>Addit. Info</td>
+        </tr>
+        <tr>
+            <td>6.1</td>
+            <td>Screening</td>
+            <td>Background verification checks on all candidates to become personnel shall be carried out prior to joining the organization and on an ongoing basis taking into consideration applicable laws, regulations and ethics and be proportional to the business requirements, the classification of the information to be accessed and the perceived risks.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.2</td>
+            <td>Terms and conditions of employment</td>
+            <td>The employment contractual agreements shall state the personnel’s and the organization’s responsibilities for information security.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.3</td>
+            <td>Information security awareness, education and training</td>
+            <td>Personnel of the organization and relevant interested parties shall receive appropriate information security awareness, education and training and regular updates of the organization's information security policy, topic-specific policies and procedures, as relevant for their job function.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.4</td>
+            <td>Disciplinary process</td>
+            <td>A disciplinary process shall be formalized and communicated to take actions against personnel and other relevant interested parties who have committed an information security policy violation.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.5</td>
+            <td>Responsibilities after termination or change of employment</td>
+            <td>Information security responsibilities and duties that remain valid after termination or change of employment shall be defined, enforced and communicated to relevant personnel and other interested parties.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.6</td>
+            <td>Confidentiality or non-disclosure agreements</td>
+            <td>Confidentiality or non-disclosure agreements reflecting the organization’s needs for the protection of information shall be identified, documented, regularly reviewed and signed by personnel and other relevant interested parties.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.7</td>
+            <td>Remote working</td>
+            <td>Security measures shall be implemented when personnel are working remotely to protect information accessed, processed or stored outside the organization’s premises.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>6.8</td>
+            <td>Information security event reporting</td>
+            <td>The organization shall provide a mechanism for personnel to report observed or suspected information security events through appropriate channels in a timely manner.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.0</td>
+            <td></td>
+            <td><span style="font-weight: bold;">Physical Controls</span></td>
+            <td><select><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td>Auditor or Team</td>
+            <td>Loc. of evidence</td>
+            <td>Date:</td>
+            <td>Addit. Info</td>
+        </tr>
+        <tr>
+            <td>7.1</td>
+            <td>Physical security perimeters</td>
+            <td>Security perimeters shall be defined and used to protect areas that contain information and other associated assets.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.2</td>
+            <td>Physical entry</td>
+            <td>Secure areas shall be protected by appropriate entry controls and access points.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.3</td>
+            <td>Securing offices, rooms and facilities</td>
+            <td>Physical security for offices, rooms and facilities shall be designed and implemented.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.4</td>
+            <td>Physical security monitoring</td>
+            <td>Premises shall be continuously monitored for unauthorized physical access.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.5</td>
+            <td>Protecting against physical and environmental threats</td>
+            <td>Protection against physical and environmental threats, such as natural disasters and other intentional or unintentional physical threats to infrastructure shall be designed and implemented.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.6</td>
+            <td>Working in secure areas</td>
+            <td>Security measures for working in secure areas shall be designed and implemented.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.7</td>
+            <td>Clear desk and clear screen</td>
+            <td>Clear desk rules for papers and removable storage media and clear screen rules for information processing facilities shall be defined and appropriately enforced.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.8</td>
+            <td>Equipment siting and protection</td>
+            <td>Equipment shall be sited securely and protected.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.9</td>
+            <td>Security of assets off-premises</td>
+            <td>Off-site assets shall be protected.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.1</td>
+            <td>Storage media</td>
+            <td>Storage media shall be managed through their life cycle of acquisition, use, transportation and disposal in accordance with the organization’s classification scheme and handling requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.11</td>
+            <td>Supporting utilities</td>
+            <td>Information processing facilities shall be protected from power failures and other disruptions caused by failures in supporting utilities.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.12</td>
+            <td>Cabling security</td>
+            <td>Cables carrying power, data or supporting information services shall be protected from interception, interference or damage.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.13</td>
+            <td>Equipment maintenance</td>
+            <td>Equipment shall be maintained correctly to ensure availability, integrity and confidentiality of information.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>7.14</td>
+            <td>Secure disposal or re-use of equipment</td>
+            <td>Items of equipment containing storage media shall be verified to ensure that any sensitive data and licensed software has been removed or securely overwritten prior to disposal or re-use.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.0</td>
+            <td></td>
+            <td><span style="font-weight: bold;">Technological Controls</span></td>
+            <td><select><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td>Auditor or Team</td>
+            <td>Loc. of evidence</td>
+            <td>Date:</td>
+            <td>Addit. Info</td>
+        </tr>
+        <tr>
+            <td>8.1</td>
+            <td>User end point devices</td>
+            <td>Information stored on, processed by, or accessible via user end point devices shall be protected.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.2</td>
+            <td>Privileged access rights</td>
+            <td>The allocation and use of privileged access rights shall be restricted and managed.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.3</td>
+            <td>Information access restriction</td>
+            <td>Access to information and other associated assets shall be restricted in accordance with the established topic-specific policy on access control.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.4</td>
+            <td>Access to source code</td>
+            <td>Read and write access to source code, development tools, and software libraries shall be appropriately managed.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.5</td>
+            <td>Secure authentication</td>
+            <td>Secure authentication technologies and procedures shall be implemented based on information access restrictions and the topic-specific policy on access control.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.6</td>
+            <td>Capacity management</td>
+            <td>The use of resources shall be monitored and adjusted in line with current and expected capacity requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.7</td>
+            <td>Protection against malware</td>
+            <td>Protection against malware shall be implemented and supported by appropriate user awareness.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.8</td>
+            <td>Management of technical vulnerabilities</td>
+            <td>Information about technical vulnerabilities of information systems in use shall be obtained, the organization’s exposure to such vulnerabilities shall be evaluated, and appropriate measures shall be taken.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.9</td>
+            <td>Configuration management</td>
+            <td>Configurations, including security configurations, of hardware, software, services, and networks shall be established, documented, implemented, monitored, and reviewed.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.10</td>
+            <td>Information deletion</td>
+            <td>Information stored in information systems, devices, or in any other storage media shall be deleted when no longer required.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.11</td>
+            <td>Data masking</td>
+            <td>Data masking shall be used in accordance with the organization’s topic-specific policy on access control and other related topic-specific policies, and business requirements, taking applicable legislation into consideration.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.12</td>
+            <td>Data leakage prevention</td>
+            <td>Data leakage prevention measures shall be applied to systems, networks, and any other devices that process, store, or transmit sensitive information.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.13</td>
+            <td>Information backup</td>
+            <td>Backup copies of information, software, and systems shall be maintained and regularly tested in accordance with the agreed topic-specific policy on backup.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.14</td>
+            <td>Redundancy of information processing facilities</td>
+            <td>Information processing facilities shall be implemented with redundancy sufficient to meet availability requirements.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.15</td>
+            <td>Logging</td>
+            <td>Logs that record activities, exceptions, faults, and other relevant events shall be produced, stored, protected, and analyzed.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.16</td>
+            <td>Monitoring activities</td>
+            <td>Networks, systems, and applications shall be monitored for anomalous behavior, and appropriate actions taken to evaluate potential information security incidents.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.17</td>
+            <td>Clock synchronization</td>
+            <td>The clocks of information processing systems used by the organization shall be synchronized to approved time sources.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.18</td>
+            <td>Use of privileged utility programs</td>
+            <td>The use of utility programs that can be capable of overriding system and application controls shall be restricted and tightly controlled.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.19</td>
+            <td>Installation of software on operational systems</td>
+            <td>Procedures and measures shall be implemented to securely manage software installation on operational systems.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.20</td>
+            <td>Networks security</td>
+            <td>Networks and network devices shall be secured, managed, and controlled to protect information in systems and applications.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.21</td>
+            <td>Security of network services</td>
+            <td>Security mechanisms, service levels, and service requirements of network services shall be identified, implemented, and monitored.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.22</td>
+            <td>Segregation of networks</td>
+            <td>Groups of information services, users, and information systems shall be segregated on the organization’s networks.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.23</td>
+            <td>Web filtering</td>
+            <td>Access to external websites shall be managed to reduce exposure to malicious content.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.24</td>
+            <td>Use of cryptography</td>
+            <td>Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.25</td>
+            <td>Secure development life cycle</td>
+            <td>Rules for the secure development of software and systems shall be established and applied.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.26</td>
+            <td>Application security requirements</td>
+            <td>Information security requirements shall be identified, specified, and approved when developing or acquiring applications.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.27</td>
+            <td>Secure system architecture and engineering principles</td>
+            <td>Principles for engineering secure systems shall be established, documented, maintained, and applied to any information system development activities.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.28</td>
+            <td>Secure coding</td>
+            <td>Secure coding principles shall be applied to software development.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.29</td>
+            <td>Security testing in development and acceptance</td>
+            <td>Security testing processes shall be defined and implemented in the development life cycle.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.30</td>
+            <td>Outsourced development</td>
+            <td>The organization shall direct, monitor, and review the activities related to outsourced system development.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.31</td>
+            <td>Separation of development, test, and production environments</td>
+            <td>Development, testing, and production environments shall be separated and secured.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.32</td>
+            <td>Change management</td>
+            <td>Changes to information processing facilities and information systems shall be subject to change management procedures.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.33</td>
+            <td>Test information</td>
+            <td>Test information shall be appropriately selected, protected, and managed.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+        <tr>
+            <td>8.34</td>
+            <td>Protection of information systems during audit testing</td>
+            <td>Audit tests and other assurance activities involving assessment of operational systems shall be planned and agreed between the tester and appropriate management.</td>
+            <td><select><option value="Planning" selected>Planning</option><option value="In Progress">In Progress</option><option value="Done">Done</option><option value="N/A">N/A</option></select></td>
+            <td><select><option value=""> </option><option value="Yes">Yes</option><option value="No">No</option></select></td>
+            <td><select><option value=""> </option><option value="Auditor">Auditor</option><option value="Team">Team</option></select></td>
+            <td><textarea placeholder="Enter location of proof..."></textarea></td>
+            <td><input type='date'></td>
+            <td><textarea placeholder="comments here.."></textarea></td>
+        </tr>
+     
+    </table>
+    <div class="download-btn">
+        <button id="downloadXLS">Download as XLS</button>
+    </div>
+
+    <div class="download-btn">
+        <button onclick="downloadCSV()">Download CSV</button>
+        <button onclick="downloadJSON()">Download JSON</button>
+    </div>
+
+    <div class="print-btn">
+        <button onclick="window.print()">Print</button>
+    </div>
+</div>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.3/jspdf.plugin.autotable.min.js"></script>
+<script>
+    // Download as XLS
+    document.getElementById('downloadXLS').addEventListener('click', function() {
+        var wb = XLSX.utils.table_to_book(document.getElementById('pciTable'), {sheet: "PCI-DSS"});
+        XLSX.writeFile(wb, 'pci_dss_implementation_tool.xlsx');
+    });
+
+     // Function to download the table as CSV
+     function downloadCSV() {
+        let csv = [];
+        const rows = document.querySelectorAll("table tr");
+        rows.forEach(row => {
+            const cols = row.querySelectorAll("td, th");
+            const data = [];
+            cols.forEach(col => data.push(col.innerText));
+            csv.push(data.join(","));
+        });
+        const csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(csvFile);
+        link.download = "pci_dss_implementation_tool.csv";
+        link.click();
+    }
+
+    <!-- Replace your current downloadJSON function with this one -->
+
+function downloadJSON() {
+const tableData = [];
+
+// Select all table rows in the <tbody> of #pciTable
+const rows = document.querySelectorAll("#pciTable tbody tr");
+
+rows.forEach((row) => {
+  const columns = row.querySelectorAll("td");
+  if (columns.length === 6) {
+    const rowData = {};
+
+    // Column 0: Requirement (plain text)
+    rowData["Requirement"] = columns[0].innerText.trim();
+
+    // Column 1: Milestone (from <select>)
+    const milestoneSelect = columns[1].querySelector("select");
+    rowData["Milestone"] = milestoneSelect ? milestoneSelect.value : "";
+
+    // Column 2: Status (from <input> or <textarea>)
+    const statusInput = columns[2].querySelector("input, textarea");
+    rowData["Status"] = statusInput ? statusInput.value.trim() : "";
+
+    // Column 3: Stage (from <select>)
+    const stageSelect = columns[3].querySelector("select");
+    rowData["Stage"] = stageSelect ? stageSelect.value : "";
+
+    // Column 4: Completion Date (from <input type="date">)
+    const dateInput = columns[4].querySelector("input[type='date']");
+    rowData["Completion Date"] = dateInput ? dateInput.value : "";
+
+    // Column 5: Comments (from <textarea>)
+    const commentsTextarea = columns[5].querySelector("textarea");
+    rowData["Comments"] = commentsTextarea ? commentsTextarea.value.trim() : "";
+
+    tableData.push(rowData);
+  }
+});
+
+// Convert the array of row objects to JSON
+const json = JSON.stringify(tableData, null, 2);
+
+// Create and download the JSON file
+const blob = new Blob([json], { type: "application/json" });
+const link = document.createElement("a");
+link.href = URL.createObjectURL(blob);
+link.download = "pci_dss_implementation_tool.json";
+link.click();
+}
+</script>
+</body>
+</html>

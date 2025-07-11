@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberLifeCoach</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH1z7L+RZ1Q0YH3DXqMhk0svLJ0tEERx6aKqRdSclq8R+53y2pQeUTcE3Kk5f1BSnURCj1RQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .product-spotlight {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+        }
+        .product-spotlight h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-tile {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .product-tile img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .product-tile h4 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="images/CyberLifeCoachLogo.jpg" alt="CyberLifeCoach Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="assessments.html">Assessments</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="compliance-navigator.html">Compliance Navigator</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Discover your Privacy Score</h1>
+            <p><strong>A Veteran-Owned Business Committed to Your Digital Security</strong></p>
+            <p>Take an assessment today and empower your digital security with tailored insights and actionable strategies from CyberLifeCoach.</p>
+            <div class="cta-buttons">
+                <a href="assessments.html" class="btn primary-btn">Get Started</a>
+                <a href="courses.html" class="btn primary-btn">View Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-spotlight">
+        <div class="container">
+            <h2>Featured Workbooks & Guides</h2>
+            <div class="product-grid">
+                <div class="product-tile">
+                    <img src="images/digital-nomad-workbook.jpg" alt="Digital Nomad Security Workbook">
+                    <h4>Digital Nomad Security Workbook</h4>
+                    <a href="https://gumroad.com/your-nomad-guide" class="btn primary-btn">Explore</a>
+                </div>
+                <div class="product-tile">
+                    <img src="images/nonprofit-guide.jpg" alt="Nonprofit Organization Cybersecurity Guide">
+                    <h4>Nonprofit Cybersecurity Guide</h4>
+                    <a href="https://gumroad.com/your-nonprofit-guide" class="btn primary-btn">View</a>
+                </div>
+                <div class="product-tile">
+                    <img src="images/retiree-guide.jpg" alt="Retiree Digital Housekeeping Guide">
+                    <h4>Digital Housekeeping for Retirees</h4>
+                    <a href="https://gumroad.com/your-retiree-guide" class="btn primary-btn">Download</a>
+                </div>
+                <div class="product-tile">
+                    <img src="images/encryptopedia.jpg" alt="Encryptopedia Guide for Journalists">
+                    <h4>Encryptopedia for Journalists</h4>
+                    <a href="https://gumroad.com/your-journalist-guide" class="btn primary-btn">Get It</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sections-overview">
+        <div class="container">
+            <!-- Existing cards remain unchanged -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#"><img src="images/CyberLifeCoachLogo.jpg" alt="CyberLifeCoach Logo"></a>
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <iframe src="https://cyberlifecoach.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+            <p>&copy; 2025 CyberLifeCoach | <strong> A Veteran-Owned Business Committed to Your Digital Security</strong> | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+    <a href="consult.html" class="slide-out-button">Schedule a Free Consult</a>
+</body>
+</html>

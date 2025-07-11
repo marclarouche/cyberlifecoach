@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pricing Plans - CyberLifeCoach</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/pricing.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Pricing Plans</h1>
+    <p>Flexible plans designed to meet your unique privacy and security needs.</p>
+
+    <div class="grid md:grid-cols-3">
+      <!-- Basic Card -->
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="pricing-plan-title">Basic Plan</h2>
+          <p class="plan-price">$99</p>
+          <ul>
+            <li>Initial Privacy Audit Report</li>
+            <li>Customized Privacy Plan</li>
+            <li>Password Manager & Browser Setup</li>
+            <li>Email Support</li>
+          </ul>
+        </div>
+        <button
+          class="bg-blue-600 hover:bg-blue-500 text-white py-2 px-4 rounded font-bold"
+          onclick="window.location.href='https://buy.stripe.com/xyzBasicLink';"
+        >
+          Choose Basic
+        </button>
+      </div>
+
+      <!-- Standard Card -->
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="pricing-plan-title">Standard Plan</h2>
+          <p class="plan-price">$199</p>
+          <ul>
+            <li>All Basic Plan Features</li>
+            <li>Device Security Audit</li>
+            <li>Hands-On Implementation</li>
+            <li>Device Security Setup</li>
+            <li>Monthly Privacy Reports</li>
+          </ul>
+        </div>
+        <button
+          class="bg-blue-600 hover:bg-blue-500 text-white py-2 px-4 rounded font-bold"
+          onclick="window.location.href='https://buy.stripe.com/xyzStandardLink';"
+        >
+          Choose Standard
+        </button>
+      </div>
+
+      <!-- Premium Card -->
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="pricing-plan-title">Premium Plan</h2>
+          <p class="plan-price">$499/year</p>
+          <ul>
+            <li>All Standard Plan Features</li>
+            <li>Continuous Monitoring & Support</li>
+            <li>Dedicated Concierge Support</li>
+            <li>Quarterly Privacy Audits</li>
+            <li>Email Access</li>
+          </ul>
+        </div>
+        <button
+          class="bg-blue-600 hover:bg-blue-500 text-white py-2 px-4 rounded font-bold"
+          onclick="window.location.href='https://buy.stripe.com/xyzPremiumLink';"
+        >
+          Choose Premium
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* ---------------------------------------------------
+   About Us Section Styles
+   File: about-styles.css
+   --------------------------------------------------- */
+
+/* ---------------------------------------------------
+   General Styles for About Us Section
+   --------------------------------------------------- */
+
+   #about-us {
+    padding: 60px 20px;
+    background-color: var(--background-color);
+    font-family: var(--font-family);
+  }
+  
+  #about-us .container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 15px; /* Added padding for better spacing on smaller screens */
+  }
+  
+  #about-us h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--text-color);
+    font-weight: 700;
+  }
+  
+  /* ---------------------------------------------------
+     About Content Layout
+     --------------------------------------------------- */
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    gap: 40px; /* Added gap for consistent spacing */
+  }
+  
+  .profile-image {
+    flex: 1 1 250px;
+    max-width: 250px;
+    flex-basis: 250px;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+  }
+  
+  /* ---------------------------------------------------
+     Biography Section
+     --------------------------------------------------- */
+  
+  .bio {
+    flex: 3 1 600px;
+  }
+  
+  .bio h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+  
+  .bio p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 20px; /* Added margin for better spacing between paragraphs */
+  }
+  
+  .bio h4 {
+    font-size: 1.4em;
+    margin-top: 20px;
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+  
+  .bio ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px; /* Added margin for better spacing */
+    color: var(--text-color);
+  }
+  
+  .bio ul li {
+    margin-bottom: 10px; /* Spacing between list items */
+  }
+  
+  /* ---------------------------------------------------
+     Mission Statement and Testimonials
+     --------------------------------------------------- */
+  
+  .mission-statement,
+  .testimonials {
+    margin-bottom: 40px;
+  }
+  
+  .mission-statement h3,
+  .testimonials h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+  
+  .mission-statement p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  .testimonial {
+    background-color: var(--light-background);
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px; /* Slight rounding for aesthetics */
+  }
+  
+  .testimonial p {
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 10px; /* Spacing between quote and author */
+  }
+  
+  .testimonial span {
+    display: block;
+    text-align: right;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  /* ---------------------------------------------------
+     Responsive Design
+     --------------------------------------------------- */
+  
+  @media (max-width: 992px) {
+    .about-content {
+      gap: 30px; /* Reduced gap for medium screens */
+    }
+  
+    .bio {
+      flex: 2 1 500px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Reduced gap for smaller screens */
+    }
+  
+    .profile-image {
+      max-width: 100%;
+      flex-basis: auto;
+    }
+  
+    .bio {
+      flex: 1 1 100%;
+      text-align: center; /* Center-align text on smaller screens */
+    }
+  
+    .bio h3,
+    .bio h4 {
+      text-align: center;
+    }
+  
+    .mission-statement h3,
+    .testimonials h3 {
+      text-align: center;
+    }
+  
+    .testimonial {
+      text-align: left; /* Align testimonials to left for readability */
+    }
+  
+    .testimonial span {
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #about-us h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+  
+    .bio h3 {
+      font-size: 1.6em;
+    }
+  
+    .bio h4 {
+      font-size: 1.2em;
+    }
+  
+    .mission-statement h3,
+    .testimonials h3 {
+      font-size: 1.6em;
+    }
+  }
+  

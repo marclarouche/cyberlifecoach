@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing Plans - CyberLife Coach</title>
+  <!-- Add some basic styling -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@3.2.7/dist/tailwind.min.css"
+  />
+</head>
+<body class="bg-gray-100">
+  <!-- Stripe JS library -->
+  <script src="https://js.stripe.com/v3"></script>
+
+  <div class="container mx-auto py-12">
+    <!-- Heading -->
+    <h1 class="text-4xl font-bold text-center mb-8">Pricing Plans</h1>
+    <p class="text-center mb-12 text-gray-600">
+      Flexible plans designed to meet your unique privacy and security needs.
+    </p>
+
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Basic Plan -->
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold mb-2">Basic Plan</h2>
+          <p class="text-gray-600 mb-4">$99</p>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li>Initial Privacy Audit</li>
+            <li>Customized Privacy Plan</li>
+            <li>Password Manager Setup</li>
+            <li>Email Support</li>
+          </ul>
+        </div>
+        <button
+          class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500"
+          onclick="handleCheckout('price_123Basic')"
+        >
+          Choose Basic
+        </button>
+      </div>
+
+      <!-- Standard Plan -->
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold mb-2">Standard Plan</h2>
+          <p class="text-gray-600 mb-4">$199</p>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li>All Basic Plan Features</li>
+            <li>Hands-On Implementation</li>
+            <li>Device Security Setup</li>
+            <li>Monthly Privacy Reports</li>
+          </ul>
+        </div>
+<button
+  class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500"
+  onclick="window.location.href='pricing.html';"
+>
+  View Pricing
+</button>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col justify-between">
+        <div>
+          <h2 class="text-2xl font-bold mb-2">Premium Plan</h2>
+          <p class="text-gray-600 mb-4">$499/year</p>
+          <ul class="list-disc list-inside text-gray-700 mb-6">
+            <li>All Standard Plan Features</li>
+            <li>Continuous Monitoring and Support</li>
+            <li>Dedicated Concierge Support</li>
+            <li>Quarterly Privacy Audits</li>
+            <li>24/7 Hotline Access</li>
+          </ul>
+        </div>
+        <button
+          class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-500"
+          onclick="handleCheckout('price_123Premium')"
+        >
+          Choose Premium
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Replace with your actual Stripe public key
+    const stripe = Stripe('YOUR_PUBLISHABLE_KEY');
+
+    // This function will call a backend endpoint to create a Checkout Session
+    async function handleCheckout(priceId) {
+      try {
+        // Make a request to your server to create a new Checkout Session
+        const response = await fetch('/create-checkout-session', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ priceId: priceId })
+        });
+
+        const session = await response.json();
+
+        // Redirect to Stripe Checkout
+        const result = await stripe.redirectToCheckout({ sessionId: session.id });
+
+        if (result.error) {
+          // Display error.message in your UI
+          alert(result.error.message);
+        }
+      } catch (error) {
+        console.error('Error creating checkout session:', error);
+        alert('Unable to create checkout session. Please try again.');
+      }
+    }
+  </script>
+</body>
+</html>

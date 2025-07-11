@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PCI-DSS Compliance Checklist</title>
+  <!-- Link to external CSS -->
+ <!-- <link rel="stylesheet" href="css/style.css"/> -->
+
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background-color: #f9f9f9;
+    }
+    h1 {
+            color: #2c3e50;
+        }
+    h2 {
+        color: #2c3e50;
+    }
+    h3 {
+        color: #34495e;
+        margin-top: 20px;
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        margin-bottom: 10px;
+    }
+    input[type="checkbox"] {
+        margin-right: 10px;
+        transform: scale(1.2);
+    }
+    .section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+    }
+    .sub-section {
+        margin-left: 20px;
+    }
+    /* Style for the Print Button */
+    .print-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #2c3e50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        background: #2c3e50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .print-btn {
+        text-align: center;
+        margin-top: 20px;
+    } 
+    .print-button:hover {
+        background-color: #1f6391;
+    }
+    button:hover {
+        background: #1f6391;
+    }
+    /* Hide the print button when printing */
+    @media print {
+        .print-button {
+            display: none;
+        }
+    }
+
+                   /* New Header Styles */
+                   header {
+        background-color: #2c3e50;
+        color: #ffffff;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    header .logo:hover {
+     color: #1f6391; /* Hover color */
+    }
+
+    nav ul {
+        display: flex;
+        gap: 15px;
+    }
+    nav ul li {
+        list-style: none;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+        color: #27ae60;
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+
+</style>
+
+</head>
+<body>
+
+  <header>
+    <nav>
+        <a href="index.html" class="logo">CyberLifeCoach</a>
+    </nav>
+  </header>
+
+  <!-- Print Button -->
+  <button class="print-button" onclick="window.print()">📄 Print Checklist</button>
+
+
+  <main class="checklist-container">
+    <h1>PCI-DSS Compliance Checklist</h1>
+    <!-- 1. Network Security -->
+    <section class="checklist-section">
+      <h2>1. Network Security</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Implement and maintain a firewall configuration to protect cardholder data</li>
+        <li><input type="checkbox" disabled> Restrict inbound and outbound traffic to only necessary protocols</li>
+        <li><input type="checkbox" disabled> Disable direct public access to web form</li>
+        <li><input type="checkbox" disabled> Use Web Application Firewall (WAF)</li>
+      </ul>
+    </section>
+
+    <!-- 2. Data Protection -->
+    <section class="checklist-section">
+      <h2>2. Data Protection</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Encrypt transmission of cardholder data across open, public networks</li>
+        <li><input type="checkbox" disabled> Use TLS 1.2 or higher for data transmission</li>
+        <li><input type="checkbox" disabled> Implement strong encryption for stored cardholder data</li>
+        <li><input type="checkbox" disabled> Mask/truncate card numbers in form displays</li>
+        <li><input type="checkbox" disabled> Never store full CVV/CVC numbers</li>
+      </ul>
+    </section>
+
+    <!-- 3. Vulnerability Management -->
+    <section class="checklist-section">
+      <h2>3. Vulnerability Management</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Use latest secure coding practices</li>
+        <li><input type="checkbox" disabled> Implement input validation on all form fields</li>
+        <li><input type="checkbox" disabled> Protect against common web vulnerabilities (XSS, CSRF, SQL Injection)</li>
+        <li><input type="checkbox" disabled> Perform regular security scans and penetration testing</li>
+        <li><input type="checkbox" disabled> Keep all systems and software updated with security patches</li>
+      </ul>
+    </section>
+
+    <!-- 4. Access Control -->
+    <section class="checklist-section">
+      <h2>4. Access Control</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Implement unique user IDs for system access</li>
+        <li><input type="checkbox" disabled> Use multi-factor authentication for admin access</li>
+        <li><input type="checkbox" disabled> Restrict access to cardholder data on need-to-know basis</li>
+        <li><input type="checkbox" disabled> Implement role-based access controls</li>
+        <li><input type="checkbox" disabled> Maintain an access control matrix</li>
+      </ul>
+    </section>
+
+    <!-- 5. Form-Specific Security Measures -->
+    <section class="checklist-section">
+      <h2>5. Form-Specific Security Measures</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Use HTTPS for entire form submission process</li>
+        <li><input type="checkbox" disabled> Implement CAPTCHA to prevent automated submissions</li>
+        <li><input type="checkbox" disabled> Limit number of submission attempts</li>
+        <li><input type="checkbox" disabled> Use tokenization for payment processing</li>
+        <li><input type="checkbox" disabled> Integrate with PCI-compliant payment gateway</li>
+        <li><input type="checkbox" disabled> Implement secure session management</li>
+        <li><input type="checkbox" disabled> Add timeout/logout functionality</li>
+      </ul>
+    </section>
+
+    <!-- 6. Monitoring and Logging -->
+    <section class="checklist-section">
+      <h2>6. Monitoring and Logging</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Log all access and changes to system</li>
+        <li><input type="checkbox" disabled> Monitor and alert on suspicious activities</li>
+        <li><input type="checkbox" disabled> Retain log files for at least one year</li>
+        <li><input type="checkbox" disabled> Implement real-time alerting for potential security incidents</li>
+      </ul>
+    </section>
+
+    <!-- 7. Incident Response -->
+    <section class="checklist-section">
+      <h2>7. Incident Response</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Develop and maintain an incident response plan</li>
+        <li><input type="checkbox" disabled> Create procedures for potential data breach</li>
+        <li><input type="checkbox" disabled> Establish communication protocols for security events</li>
+      </ul>
+    </section>
+
+    <!-- 8. Compliance Documentation -->
+    <section class="checklist-section">
+      <h2>8. Compliance Documentation</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Maintain detailed security policy documentation</li>
+        <li><input type="checkbox" disabled> Conduct annual PCI-DSS assessment</li>
+        <li><input type="checkbox" disabled> Keep records of all compliance efforts</li>
+        <li><input type="checkbox" disabled> Perform quarterly vulnerability scans</li>
+      </ul>
+    </section>
+
+    <!-- 9. Third-Party Integrations -->
+    <section class="checklist-section">
+      <h2>9. Third-Party Integrations</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Verify PCI-DSS compliance of all payment processors</li>
+        <li><input type="checkbox" disabled> Ensure secure API integrations</li>
+        <li><input type="checkbox" disabled> Conduct vendor security assessments</li>
+        <li><input type="checkbox" disabled> Implement secure vendor management practices</li>
+      </ul>
+    </section>
+
+    <!-- 10. Regular Testing and Training -->
+    <section class="checklist-section">
+      <h2>10. Regular Testing and Training</h2>
+      <ul>
+        <li><input type="checkbox" disabled> Conduct periodic security awareness training</li>
+        <li><input type="checkbox" disabled> Perform regular penetration testing</li>
+        <li><input type="checkbox" disabled> Test incident response procedures annually</li>
+        <li><input type="checkbox" disabled> Review and update security controls regularly</li>
+      </ul>
+    </section>
+
+  </main>
+ <!-- JavaScript for Saving Checkbox States and Print Functionality -->
+ <script>
+    // Function to load checkbox states from localStorage
+    function loadCheckboxStates() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            const checked = localStorage.getItem(checkbox.id) === 'true';
+            checkbox.checked = checked;
+        });
+    }
+
+    // Function to save checkbox states to localStorage
+    function saveCheckboxState(event) {
+        const checkbox = event.target;
+        localStorage.setItem(checkbox.id, checkbox.checked);
+    }
+
+    // Attach event listeners to all checkboxes
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('change', saveCheckboxState);
+    });
+
+    // Load checkbox states on page load
+    window.onload = loadCheckboxStates;
+</script>
+  <footer>
+    <!-- Your website footer or contact info -->
+    <p>© 2025 Cyber Life Coach. All rights reserved.</p>
+  </footer>
+  <div class="print-btn">
+    <button class="btn" onclick="window.print();">Print Checklist</button>
+   </div>
+</body>
+</html>

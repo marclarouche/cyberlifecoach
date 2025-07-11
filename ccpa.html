@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCPA Compliance Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        h4 {
+            color: #3c6382;
+            margin-top: 15px;
+        }
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .print-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .print-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #2c3e50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        .print-button:hover {
+            background-color: #1f6391;
+        }
+        button:hover {
+            background: #1f6391;
+        }
+        /* Hide the print button when printing */
+        @media print {
+            .print-button {
+                display: none;
+            }
+        }
+          /* New Header Styles */
+          header {
+        background-color: #2c3e50;
+        color: #ffffff;
+        padding: 15px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    header .logo:hover {
+     color: #1f6391; /* Hover color */
+    }
+
+    nav ul {
+        display: flex;
+        gap: 15px;
+    }
+    nav ul li {
+        list-style: none;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+        color: #27ae60;
+    }
+
+    /* Responsive Navigation */
+    @media (max-width: 600px) {
+        nav ul {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">CyberLifeCoach</a>
+        </nav>
+      </header>
+
+    <!-- Print Button -->
+    <button class="print-button" onclick="window.print()">📄 Print Checklist</button>
+
+    <div class="section">
+        <h2>CCPA Compliance Checklist</h2>
+
+        <h3>1. CCPA Compliance Scope</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="scope-revenue">
+                <label for="scope-revenue"><strong>Annual Gross Revenues Above $25 Million:</strong> Ensure your organization meets the revenue threshold.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="scope-consumers">
+                <label for="scope-consumers"><strong>Personal Information of 50,000+ Consumers:</strong> Verify if you possess data of this magnitude.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="scope-revenue-sale">
+                <label for="scope-revenue-sale"><strong>More Than Half Revenue from Selling Personal Information:</strong> Assess your revenue sources.</label>
+            </li>
+        </ul>
+
+        <h3>2. Disclosures</h3>
+        <h4>2.1 Notice Before the Point of Collection</h4>
+        <ul>
+            <li>
+                <input type="checkbox" id="notice-before-collection">
+                <label for="notice-before-collection"><strong>Display Consent Notice Before Data Collection:</strong> Ensure no personal information is collected before showing the consent notice.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="notice-categories-purpose">
+                <label for="notice-categories-purpose"><strong>State Categories of Personal Information and Purpose:</strong> Clearly outline what data is collected and why.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="notice-do-not-sell">
+                <label for="notice-do-not-sell"><strong>Include 'Do Not Sell My Personal Information' Link:</strong> If applicable, provide an opt-out link.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="notice-privacy-policy">
+                <label for="notice-privacy-policy"><strong>Provide Link to Privacy Notice/Policy:</strong> Direct users to your comprehensive privacy policy.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="notice-update">
+                <label for="notice-update"><strong>Update Consent Notice When Collecting More Data or Changing Purpose:</strong> Refresh the notice as needed.</label>
+            </li>
+        </ul>
+
+        <h4>2.2 Privacy Notice/Policy</h4>
+        <ul>
+            <li>
+                <input type="checkbox" id="privacy-categories">
+                <label for="privacy-categories"><strong>Categories of Personal Information Collected:</strong> Detail the types of data you collect.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-purposes">
+                <label for="privacy-purposes"><strong>Purpose of Data Collection:</strong> Explain why you are collecting each type of data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-sources">
+                <label for="privacy-sources"><strong>Categories of Sources:</strong> Identify where the personal information is sourced from.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-sharing">
+                <label for="privacy-sharing"><strong>Categories of Personal Information Sold/Shared/Disclosed:</strong> Specify what data is shared and with whom.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-third-parties">
+                <label for="privacy-third-parties"><strong>Categories of Third Parties Shared With:</strong> List the third parties receiving the data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-rights">
+                <label for="privacy-rights"><strong>Describe Consumer Rights and Exercise Process:</strong> Outline how consumers can exercise their rights under CCPA.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-contact">
+                <label for="privacy-contact"><strong>Provide Business Contact Information and Notice Update Date:</strong> Ensure consumers can reach you and know when the policy was last updated.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-minors">
+                <label for="privacy-minors"><strong>Process for Minors' Personal Information:</strong> Include opt-in/opt-out procedures for minors under 16.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-financial-incentive">
+                <label for="privacy-financial-incentive"><strong>Financial Incentive Policy:</strong> If offering incentives, detail how consumer data is evaluated and how to opt-in/out.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-dsr-metrics">
+                <label for="privacy-dsr-metrics"><strong>DSR Metrics for High Volume Data Handling:</strong> Track and report data subject request metrics if handling over 10,000,000 PI annually.</label>
+            </li>
+        </ul>
+
+        <h3>3. Data Types Regulated by the CCPA</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="data-types-definition">
+                <label for="data-types-definition"><strong>Define Personal Information:</strong> Clearly identify what constitutes personal information under CCPA.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="data-types-examples">
+                <label for="data-types-examples"><strong>List Examples of Personal Information:</strong> Include names, addresses, financial info, behaviors, etc.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="data-types-inferences">
+                <label for="data-types-inferences"><strong>Identify Inferred Personal Information:</strong> Recognize data inferred from consumer behavior.</label>
+            </li>
+        </ul>
+
+        <h3>4. Selling Personal Information</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="sell-operationalize-do-not-sell">
+                <label for="sell-operationalize-do-not-sell"><strong>Operationalize 'Do Not Sell':</strong> Ensure personal information is not sold within 15 days of opt-out requests.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sell-service-agreements">
+                <label for="sell-service-agreements"><strong>Sign and Enforce Agreements with Service Providers:</strong> Comply with CCPA requirements before sharing PI.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sell-opt-out-16">
+                <label for="sell-opt-out-16"><strong>Provide Opt-Out for Consumers Aged 16 or More:</strong> Allow them to opt-out of selling their personal information at any time.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sell-detect-global-opt-out">
+                <label for="sell-detect-global-opt-out"><strong>Detect and Accept Global Opt-Out Signals:</strong> Recognize browser settings and other global opt-out preferences.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sell-third-party-notice">
+                <label for="sell-third-party-notice"><strong>Notify Consumers Before Third Parties Use Sold PI:</strong> Inform consumers if third parties use their sold PI for different purposes.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sell-stop-sell-16">
+                <label for="sell-stop-sell-16"><strong>Stop Selling PI of Individuals Aged 16 or Younger Without Consent:</strong> Implement processes to prevent unauthorized PI sales.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sell-limit-service-provider-sale">
+                <label for="sell-limit-service-provider-sale"><strong>Limit Subsequent Sale by Service Providers:</strong> Restrict service providers from selling PI if consumer opts out.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="sell-honor-opt-out-12-month">
+                <label for="sell-honor-opt-out-12-month"><strong>Honor Opt-Out Requests for 12 Months:</strong> Do not attempt to re-obtain consent within this period.</label>
+            </li>
+        </ul>
+
+        <h3>5. The Right to Access</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="access-request-options">
+                <label for="access-request-options"><strong>Provide Multiple Access Request Options:</strong> Offer an 800 number and an online method (e.g., web page).</label>
+            </li>
+            <li>
+                <input type="checkbox" id="access-verify-request">
+                <label for="access-verify-request"><strong>Verify Consumer Requests:</strong> Implement secure verification methods (e.g., secure email).</label>
+            </li>
+            <li>
+                <input type="checkbox" id="access-provide-data">
+                <label for="access-provide-data"><strong>Provide Personal Information Within 45 Days:</strong> Respond promptly to access requests.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="access-identify-sources">
+                <label for="access-identify-sources"><strong>Identify Sources and Purpose if PI Was Sold:</strong> Inform consumers about data sources and third-party recipients.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="access-required-info">
+                <label for="access-required-info"><strong>Include Required Information in Access Requests:</strong> Categories of PI collected, sources, purposes, and third parties.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="access-data-tracking">
+                <label for="access-data-tracking"><strong>Track Personal Information Locations:</strong> Ensure all data systems are mapped to fulfill access requests.</label>
+            </li>
+        </ul>
+
+        <h3>6. The Right to Deletion</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="deletion-request-process">
+                <label for="deletion-request-process"><strong>Implement Deletion Request Process:</strong> Allow consumers to request complete data deletion via forms or portals.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="deletion-verify-request">
+                <label for="deletion-verify-request"><strong>Verify Deletion Requests:</strong> Use collected information to authenticate requests.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="deletion-determine-exceptions">
+                <label for="deletion-determine-exceptions"><strong>Determine Deletion Exceptions:</strong> Identify if any data retention exceptions apply.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="deletion-permanently-erase">
+                <label for="deletion-permanently-erase"><strong>Permanently Erase Personal Information:</strong> Remove data from all active systems except backups.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="deletion-service-providers">
+                <label for="deletion-service-providers"><strong>Direct Service Providers to Delete PI:</strong> Ensure third parties also delete the consumer’s data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="deletion-verify-exemptions">
+                <label for="deletion-verify-exemptions"><strong>Ensure Data Isn’t Required for Specific Purposes:</strong> Confirm data isn’t needed for transactions, security, errors, free speech, research, legal compliance, etc.</label>
+            </li>
+        </ul>
+
+        <h3>7. Cybersecurity</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="cybersecurity-implement-controls">
+                <label for="cybersecurity-implement-controls"><strong>Implement CIS Critical Security Controls:</strong> Adopt the 20 CIS controls to safeguard personal information.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cybersecurity-breach-response">
+                <label for="cybersecurity-breach-response"><strong>Establish Data Breach Response Protocols:</strong> Prepare to handle breaches and notify affected consumers promptly.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cybersecurity-train-staff">
+                <label for="cybersecurity-train-staff"><strong>Train Staff on Cybersecurity Measures:</strong> Ensure employees understand and follow security protocols.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cybersecurity-assess-risks">
+                <label for="cybersecurity-assess-risks"><strong>Conduct Regular Cybersecurity Risk Assessments:</strong> Identify and mitigate potential security threats.</label>
+            </li>
+        </ul>
+
+        <h4>7.1 Implement CIS Critical Security Controls</h4>
+        <ul>
+            <li>
+                <input type="checkbox" id="cis-control-1">
+                <label for="cis-control-1"><strong>1. Inventory of Authorized and Unauthorized Devices:</strong> Maintain a detailed inventory of all devices connected to the network.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-2">
+                <label for="cis-control-2"><strong>2. Inventory of Authorized and Unauthorized Software:</strong> Track all software applications in use within the organization.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-3">
+                <label for="cis-control-3"><strong>3. Secure Configurations for Hardware and Software on Mobile Devices, Laptops, Workstations, and Servers:</strong> Apply security configurations to all devices and software.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-4">
+                <label for="cis-control-4"><strong>4. Continuous Vulnerability Assessment and Remediation:</strong> Regularly scan for vulnerabilities and address them promptly.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-5">
+                <label for="cis-control-5"><strong>5. Controlled Use of Administrative Privileges:</strong> Restrict administrative privileges to essential personnel only.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-6">
+                <label for="cis-control-6"><strong>6. Maintenance, Monitoring, and Analysis of Audit Logs:</strong> Keep detailed logs of system activities and monitor them for suspicious behavior.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-7">
+                <label for="cis-control-7"><strong>7. Email and Web Browsing Protection:</strong> Implement security measures to protect against email and web-based threats.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-8">
+                <label for="cis-control-8"><strong>8. Malware Defense:</strong> Deploy anti-malware solutions to detect and prevent malicious software.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-9">
+                <label for="cis-control-9"><strong>9. Limitation and Control of Network Ports, Protocols, and Services:</strong> Restrict unnecessary network ports, protocols, and services.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-10">
+                <label for="cis-control-10"><strong>10. Data Recovery Capability:</strong> Ensure data can be recovered in case of loss or corruption.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-11">
+                <label for="cis-control-11"><strong>11. Secure Configurations for Network Devices such as Firewalls, Routers, and Switches:</strong> Apply secure settings to all network infrastructure devices.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-12">
+                <label for="cis-control-12"><strong>12. Boundary Defense:</strong> Implement measures to protect the network perimeter from unauthorized access.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-13">
+                <label for="cis-control-13"><strong>13. Data Protection:</strong> Encrypt sensitive data and manage encryption keys securely.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-14">
+                <label for="cis-control-14"><strong>14. Controlled Access Based on the Need to Know:</strong> Ensure access to data is granted based on necessity.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-15">
+                <label for="cis-control-15"><strong>15. Wireless Account Control:</strong> Secure wireless networks and manage access credentials.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-16">
+                <label for="cis-control-16"><strong>16. Account Monitoring and Control:</strong> Monitor user accounts for suspicious activities and enforce account controls.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-17">
+                <label for="cis-control-17"><strong>17. Security Skills Assessment and Appropriate Training to Fill Gaps:</strong> Evaluate and enhance the cybersecurity skills of your team through training.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-18">
+                <label for="cis-control-18"><strong>18. Application Software Security:</strong> Implement security best practices in software development and maintenance.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-19">
+                <label for="cis-control-19"><strong>19. Incident Response and Management:</strong> Develop and maintain an incident response plan to handle security breaches.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="cis-control-20">
+                <label for="cis-control-20"><strong>20. Penetration Tests and Red Team Exercises:</strong> Conduct regular penetration testing and red team exercises to identify and address vulnerabilities.</label>
+            </li>
+        </ul>
+
+        <h3>8. Privacy Training</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="privacy-train-handlers">
+                <label for="privacy-train-handlers"><strong>Train Compliance Professionals:</strong> Educate staff handling consumer inquiries on CCPA rights and procedures.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-train-staff">
+                <label for="privacy-train-staff"><strong>Provide Ongoing Privacy Training:</strong> Use online courses and training modules to keep staff updated.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="privacy-train-inquiries">
+                <label for="privacy-train-inquiries"><strong>Train Staff on Handling Inquiries:</strong> Ensure employees know how to respond to data access and deletion requests.</label>
+            </li>
+        </ul>
+
+        <h3>9. CCPA Compliance Checklist</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="update-privacy-policies">
+                <label for="update-privacy-policies"><strong>Update Privacy Policies:</strong> Ensure privacy policies are compliant with CCPA requirements.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="create-accessibility-methods">
+                <label for="create-accessibility-methods"><strong>Create Methods of Accessibility:</strong> Establish easy methods for customers to request data access and deletion (e.g., toll-free number).</label>
+            </li>
+            <li>
+                <input type="checkbox" id="verification-system">
+                <label for="verification-system"><strong>Implement Verification System:</strong> Verify consumer identities before providing access to personal information.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="data-governance">
+                <label for="data-governance"><strong>Enhance Data Governance:</strong> Prepare records, data maps, and inventories of California consumers' personal data.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="opt-out-button">
+                <label for="opt-out-button"><strong>Add Opt-Out Button:</strong> Facilitate easy opt-out from the sale of personal information.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="obtain-consent-minors">
+                <label for="obtain-consent-minors"><strong>Obtain Consent from Minors:</strong> Develop processes to obtain consent from minors (13-16 years) or parental consent for those under 13.</label>
+            </li>
+        </ul>
+
+        <h3>10. Risk of CCPA Non-Compliance</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="risk-maintain-compliant">
+                <label for="risk-maintain-compliant"><strong>Maintain CCPA Compliance:</strong> Continuously adhere to CCPA regulations to avoid fines and lawsuits.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="risk-respond-requests">
+                <label for="risk-respond-requests"><strong>Respond to Consumer Requests:</strong> Ensure timely and accurate responses to data access and deletion requests.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="risk-adequate-notice">
+                <label for="risk-adequate-notice"><strong>Provide Adequate Notice:</strong> Inform consumers about data collection and usage practices.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="risk-opt-out">
+                <label for="risk-opt-out"><strong>Offer Opt-Out Options:</strong> Allow consumers to opt-out of selling their personal information.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="risk-no-discrimination">
+                <label for="risk-no-discrimination"><strong>Avoid Discrimination:</strong> Do not discriminate against consumers exercising their CCPA rights.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="risk-prevent-data-breach">
+                <label for="risk-prevent-data-breach"><strong>Prevent Data Breaches:</strong> Implement robust cybersecurity measures to protect personal information.</label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Additional Best Practices</h2>
+        <ul>
+            <li>
+                <input type="checkbox" id="conduct-cybersecurity-assessments">
+                <label for="conduct-cybersecurity-assessments"><strong>Conduct Cybersecurity Assessments:</strong> Regularly evaluate and strengthen your security measures.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="maintain-data-inventories">
+                <label for="maintain-data-inventories"><strong>Maintain Data Inventories:</strong> Keep detailed records of all personal data collected and processed.</label>
+            </li>
+            <li>
+                <input type="checkbox" id="automate-compliance-processes">
+                <label for="automate-compliance-processes"><strong>Automate Compliance Processes:</strong> Use tools and technologies to manage data requests and ensure compliance efficiently.</label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>How to Use This Checklist</h2>
+        <ul>
+            <li><strong>Review Regularly:</strong> Schedule periodic reviews of each checklist item to ensure ongoing compliance.</li>
+            <li><strong>Assign Responsibilities:</strong> Designate team members responsible for each compliance task.</li>
+            <li><strong>Update as Needed:</strong> Modify the checklist to reflect changes in your data processing activities or CCPA updates.</li>
+        </ul>
+    </div>
+
+    <!-- JavaScript for Saving Checkbox States and Print Functionality -->
+    <script>
+        // Function to load checkbox states from localStorage
+        function loadCheckboxStates() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const checked = localStorage.getItem(checkbox.id) === 'true';
+                checkbox.checked = checked;
+            });
+        }
+
+        // Function to save checkbox states to localStorage
+        function saveCheckboxState(event) {
+            const checkbox = event.target;
+            localStorage.setItem(checkbox.id, checkbox.checked);
+        }
+
+        // Attach event listeners to all checkboxes
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', saveCheckboxState);
+        });
+
+        // Load checkbox states on page load
+        window.onload = loadCheckboxStates;
+    </script>
+    <footer>
+        <!-- Your website footer or contact info -->
+        <p>© 2025 Cyber Life Coach. All rights reserved.</p>
+      </footer>
+   <div class="print-btn">
+    <button class="btn" onclick="window.print();">Print Checklist</button>
+   </div>
+</body>
+</html>

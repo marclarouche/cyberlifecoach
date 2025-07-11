@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberLifeCoach - Assessments</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnH1z7L+RZ1Q0YH3DXqMhk0svLJ0tEERx6aKqRdSclq8R+53y2pQeUTcE3Kk5f1BSnURCj1RQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Modal CSS (Optional if you prefer to keep CSS in styles.css) -->
+    <style>
+        /* Modal Overlay */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+        }
+
+        /* Modal Content Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto; /* 5% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%; /* Could be more or less, depending on screen size */
+            max-width: 800px; /* Maximum width */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        /* Close Button */
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Responsive iframe */
+        .modal-content iframe {
+            width: 100%;
+            height: 800px;
+            border: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .modal-content iframe {
+                height: 600px;
+            }
+        }
+
+        /* Optional: Style the buttons to match your theme */
+        .btn.primary-btn {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn.primary-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/CyberLifeCoachLogo.jpg" alt="CyberLifeCoach Logo"></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="compliance-navigator.html">Compliance Navigator</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Assessments Section -->
+    <section class="assessments">
+        <div class="container">
+            <h1>Cybersecurity Assessments</h1>
+            <p>Select an assessment type to evaluate your cybersecurity posture.</p>
+            <div class="assessment-options">
+                <!-- Personal Assessment -->
+                <div class="assessment-card">
+                    <i class="fas fa-user"></i>
+                    <h2>Personal Assessment</h2>
+                    <p>Evaluate your personal cybersecurity setup and discover ways to secure your digital life.</p>
+                    <a href="#" id="openPersonalForm" class="btn primary-btn">Start Personal Assessment</a>
+                </div>
+                <!-- Small Business Assessment -->
+                <div class="assessment-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h2>Small Business Assessment</h2>
+                    <p>Analyze your small business's cybersecurity practices and protect your organization's data.</p>
+                    <a href="#" id="openBusinessForm" class="btn primary-btn">Start Business Assessment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Assessment Modal -->
+    <div id="personalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closePersonalModal">&times;</span>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSewW7D81ICKl5U2vUCENJvYjH8Gpnn7BrjeE3X4Fb1LXlqQQA/viewform?embedded=true" width="640" height="1478" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<!--        <iframe src="" data-src="https://docs.google.com/forms/d/e/1FAIpQLSewW7D81ICKl5U2vUCENJvYjH8Gpnn7BrjeE3X4Fb1LXlqQQA/viewform?embedded=true" title="Personal Cybersecurity Assessment Form">Loading…</iframe> -->
+        </div>
+    </div>
+
+    <!-- Small Business Assessment Modal -->
+    <div id="businessModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeBusinessModal">&times;</span>
+             
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXba2g_9CKSUnhtNMyp6idrIV9jEdB7Htbemj3MxCXh5aa-w/viewform?embedded=true" width="640" height="1478" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <!--  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSewW7D81ICKl5U2vUCENJvYjH8Gpnn7BrjeE3X4Fb1LXlqQQA/viewform?embedded=true" width="640" height="1478" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
+       <!-- <iframe src="" data-src="https://forms.gle/small-business-assessment-link" title="Small Business Cybersecurity Assessment Form">Loading…</iframe> -->
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="index.html"><img src="images/CyberLifeCoachLogo.jpg" alt="CyberLifeCoach Logo"></a>
+            </div>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2025 CyberLifeCoach | <strong> A Veteran-Owned Business Committed to Your Digital Security</strong>  | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Modal Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Personal Assessment Modal Elements
+            var personalModal = document.getElementById('personalModal');
+            var personalBtn = document.getElementById('openPersonalForm');
+            var closePersonal = document.getElementById('closePersonalModal');
+            var personalIframe = personalModal.querySelector('iframe');
+
+            // Small Business Assessment Modal Elements
+            var businessModal = document.getElementById('businessModal');
+            var businessBtn = document.getElementById('openBusinessForm');
+            var closeBusiness = document.getElementById('closeBusinessModal');
+            var businessIframe = businessModal.querySelector('iframe');
+
+            // Function to open a modal
+            function openModal(modal, iframe) {
+                if (!iframe.src) {
+                    iframe.src = iframe.getAttribute('data-src');
+                }
+                modal.style.display = "block";
+            }
+
+            // Function to close a modal
+            function closeModal(modal) {
+                modal.style.display = "none";
+            }
+
+            // Open Personal Modal
+            personalBtn.onclick = function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                openModal(personalModal, personalIframe);
+            }
+
+            // Close Personal Modal
+            closePersonal.onclick = function() {
+                closeModal(personalModal);
+            }
+
+            // Open Business Modal
+            businessBtn.onclick = function(event) {
+                event.preventDefault(); // Prevent default link behavior
+                openModal(businessModal, businessIframe);
+            }
+
+            // Close Business Modal
+            closeBusiness.onclick = function() {
+                closeModal(businessModal);
+            }
+
+            // Close Modals When Clicking Outside of Modal Content
+            window.onclick = function(event) {
+                if (event.target == personalModal) {
+                    closeModal(personalModal);
+                }
+                if (event.target == businessModal) {
+                    closeModal(businessModal);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

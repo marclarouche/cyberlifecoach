@@ -1,0 +1,1351 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Styles */
+/* Slide-Out Button Styles */
+.slide-out-button {
+    position: fixed;
+    top: 50%;
+    left: -130px; /* Initially hide most of the button off-screen */
+    transform: translateY(-50%);
+    background-color: #007BFF; /* Customize with your desired background color */
+    color: #fff;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    text-decoration: none;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slide-out-button:hover {
+    left: 0; /* Slide fully into view on hover */
+}
+
+/* slide out watch more button*/
+.watch-more-button {
+  position: fixed;
+  top: 80%;
+  left: -150px; /* Initially hide most of the button off-screen */
+  transform: translateY(-50%);
+  background-color: #007BFF; /* Customize with your desired background color */
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+  text-decoration: none;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.watch-more-button {
+  top: 60%;
+  left: -40px;  /* Adjust this value so more of the button is visible by default */
+}
+
+.watch-more-button:hover {
+  left: 0; /* Slide fully into view on hover */
+}
+
+/* slide out watch more button*/
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    width: 225px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    font-size: 1.3rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section Styles */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/maxresdefault.jpg"); /* Replace with your image path */
+    background-size: cover; /* Or contain, auto, etc. - see explanation below */
+    background-repeat: no-repeat; /* Or repeat, repeat-x, repeat-y - see explanation below */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: slideInDown 1s ease-out;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: slideInUp 1s ease-out;
+}
+
+.cta-buttons .btn {
+    padding: 12px 25px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background-color: #f0a500;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #cf8500;
+}
+
+.secondary-btn {
+    background-color: #fff;
+    color: #1a1a1a;
+}
+
+.secondary-btn:hover {
+    background-color: #e0e0e0;
+}
+
+/* Sections Overview Styles */
+.sections-overview {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.section-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(5, 91, 229, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(22, 112, 238, 0.2);
+}
+
+.section-card i {
+    font-size: 40px;
+    color: #f0a500;
+    margin-bottom: 20px;
+}
+
+.section-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.section-card p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.learn-more {
+    color: #f0a500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* =========== Testimonials ====================*/
+
+.testimonial-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 1.5rem;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 2rem;
+  color: #0073e6;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+
+.testimonial-card blockquote {
+  margin: 1rem 0;
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.testimonial-author .author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0073e6;
+}
+
+
+/* =========== testimonials ====================*/
+
+/* Footer Styles */
+footer {
+    background-color: #070707;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f0a500;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f0a500;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background-color: #1a1a1a;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+        color: #fff;
+    }
+
+    .sections-overview {
+        padding: 40px 0;
+    }
+
+    .section-card {
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
+/*====================================================
+ Pricing grid section
+ ==================================================*/
+
+ /* Grid layout for the pricing cards */
+.pricing-grid {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  /* Show 3 columns side by side on medium screens and up */
+  @media (min-width: 768px) {
+    .pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .pricing-plan {
+    background-color: #dedbdb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    /* Adjusted shadow for a more defined look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Remove default list styling from each plan’s list of features */
+  .pricing-plan ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Example styling for the pricing icon */
+  .pricing-plan i {
+    font-size: 2rem;
+    color: #ffcc00; /* adjust color if desired */
+    margin-bottom: 1rem;
+  }
+  
+  /* The 'pricing-more' section link styling */
+  .pricing-more {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .btn {
+    /* Example button styling */
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+  }
+  
+  .btn.primary-btn {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  /* Hover effect */
+.btn.primary-btn:hover {
+    background-color: #1d4ed8; /* Lighter or darker shade of the base color */
+    color: #ffffff;
+  }
+
+  .btn.secondary-btn {
+    background-color: #f0f0f0;
+    color: #333;
+  }     
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* =========================================================
+   Blog Section Styles
+========================================================= */
+
+.blog-section {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.blog-header p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f0a500;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #cf8500;
+}
+
+.blog-categories {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-categories ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 15px;
+}
+
+.blog-categories a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.blog-categories a.active,
+.blog-categories a:hover {
+    background-color: #f0a500;
+    color: #fff;
+    border-color: #f0a500;
+}
+
+.blog-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.blog-post {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post-content h3 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.post-content h3 a:hover {
+    color: #f0a500;
+}
+
+.post-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.post-meta a {
+    color: #f0a500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-meta a:hover {
+    color: #cf8500;
+}
+
+.social-share a {
+    text-decoration: none;
+    color: #f0a500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.social-share a:hover {
+    color: #cf8500;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #f0a500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #cf8500;
+}
+
+@media (max-width: 768px) {
+    .search-bar input[type="text"] {
+        width: 200px;
+    }
+
+    .blog-post img {
+        height: 150px;
+    }
+}
+/* =========================================================
+   Assessment Section Styles
+========================================================= */
+.assessments {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.assessments h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.assessments p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.assessment-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.assessment-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.assessment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.assessment-card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.assessment-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.assessment-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.assessment-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.assessment-card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .assessment-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .assessment-card {
+        width: 90%;
+    }
+}
+/* =========================================================
+   Products Section Styles
+========================================================= */
+.products {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.products h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.products p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%;
+    }
+}
+/* Compliance Navigator Section Styles
+   ======================================== */
+   .compliance-nav {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .compliance-nav h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .compliance-nav p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid Layout */
+  .compliance-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Card (similar to product-card) */
+  .compliance-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .compliance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Optional image or icon at the top of each card */
+  .compliance-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Title inside the card */
+  .compliance-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Text inside the card */
+  .compliance-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons inside the card (matches product card .btn) */
+  .compliance-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* ensures the button is at the bottom if content expands */
+  }
+  
+  .compliance-card .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Checklist styling (optional if you want the checkboxes in a card) */
+  .compliance-checklist {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .compliance-checklist label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  
+  .compliance-checklist input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  /* Progress bar styling (optional if you want a progress feature) */
+  .progress-container {
+    width: 100%;
+    margin: 20px 0;
+    text-align: left;
+  }
+  
+  .progress-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .progress-bar-bg {
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .progress-bar-fill {
+    background-color: #007bff;
+    height: 100%;
+    width: 30%; /* example default width */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-percentage {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .compliance-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .compliance-card {
+      width: 90%;
+    }
+  }
+
+/* =========================================================
+   Courses Section Styles
+========================================================= */
+.courses {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.courses h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.courses p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.course-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.course-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.course-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.course-card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card {
+        width: 90%;
+    }
+}
+
+/*---------------------------------------*/
+/* ==============================
+   Library Page Styles
+   ============================== */
+
+/* 
+   1. Library Hero Section
+   -------------------------------- 
+   Renders a full-width hero area with a background image/color, 
+   central text, and optional overlay.
+*/
+.library {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.library h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.library p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+
+/*=====================================*/
+.library-hero {
+    /* Example background image (update path if needed) */
+    background: url("../images/library-hero.jpg") center/cover no-repeat;
+    background-color: #333;  /* fallback if no image is present */
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0;
+    position: relative;
+  }
+  
+  .library-hero .container {
+    /* Optional overlay effect if you want a darker background on text */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+  }
+  
+  .library-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .library-hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* 
+     2. Library Content Section
+     -------------------------------- 
+     General spacing for sections on library page.
+  */
+  .library-section {
+    padding: 2rem 0;
+  }
+  
+  .library-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    /* optional underline or border */
+    border-bottom: 2px solid #ccc;
+    display: inline-block;
+  }
+  
+  /* 
+     3. Resources Grid (How To Documents, etc.)
+     -------------------------------- 
+     Displays items (resource documents) in a flex-based grid with card styling.
+  */
+  /* Library "How To Documents" Grid - 2 columns on desktop */
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns, each 1 fraction of space */
+    gap: 20px; /* space between columns and rows */
+    margin-top: 2rem; /* spacing above the grid */
+    justify-items: center; /* center the items in each column if desired */
+  }
+  
+  .resource-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px; /* fixed width for each card */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* or center, if you prefer */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .resource-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .resource-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .resource-item p {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+  
+  .resource-item a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .resource-item a:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive: 1 column if screen width is <= 768px */
+  @media (max-width: 768px) {
+    .resources-grid {
+      grid-template-columns: 1fr; /* single column on smaller screens */
+      justify-items: center; 
+    }
+  }
+  <!-- ================== CyberLifeCoach Contact Form Start ================== -->
+<section 
+  class="contact-form-section cyberlife-contact-form-section" 
+  style="text-align: center; margin: 40px 0;"
+>
+  <div 
+    class="container cyberlife-form-wrapper" 
+    style="
+      display: inline-block; 
+      text-align: left; 
+      background-color: #f8f8f8; /* Light shaded background */
+      padding: 2rem; 
+      border-radius: 8px; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+    "
+  >
+    <h2 
+      class="cyberlife-form-title" 
+      style="
+        text-align: center;
+        margin-bottom: 2.5rem;
+        font-family: 'Roboto', sans-serif; 
+      "
+    >
+      Contact Your Cyber Life Coach
+    </h2>
+
+    <!-- Contact Form -->
+    <form 
+      class="contact-form cyberlife-contact-form" 
+      action="#" 
+      method="POST" 
+      onsubmit="return validateForm()"
+    >
+      <!-- Name Field -->
+      <div class="form-group" style="margin-bottom: 1rem;">
+        <label for="name" style="display: block; margin-bottom: 0.5rem;">
+          Name <span class="required" style="color: red;">*</span>
+        </label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          required 
+          placeholder="Enter your full name"
+          style="
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          "
+        />
+      </div>
+
+      <!-- Email Field -->
+      <div class="form-group" style="margin-bottom: 1rem;">
+        <label for="email" style="display: block; margin-bottom: 0.5rem;">
+          Email <span class="required" style="color: red;">*</span>
+        </label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          required 
+          placeholder="Enter your email address"
+          style="
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          "
+        />
+      </div>
+
+      <!-- Subject Field -->
+      <div class="form-group" style="margin-bottom: 1rem;">
+        <label for="subject" style="display: block; margin-bottom: 0.5rem;">
+          Subject <span class="required" style="color: red;">*</span>
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          placeholder="Enter the subject"
+          style="
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          "
+        />
+      </div>
+
+      <!-- Message Field -->
+      <div class="form-group" style="margin-bottom: 1rem;">
+        <label for="message" style="display: block; margin-bottom: 0.5rem;">
+          Message <span class="required" style="color: red;">*</span>
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Type your message here"
+          rows="6"
+          style="
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          "
+        ></textarea>
+      </div>
+
+      <!-- CAPTCHA Placeholder -->
+      <div 
+        class="form-group captcha-section" 
+        style="
+          margin-bottom: 1rem; 
+          text-align: center;
+        "
+      >
+        <p style="color: #777;">[CAPTCHA Placeholder]</p>
+      </div>
+
+      <!-- Submit Button -->
+      <div style="text-align: center;">
+        <button 
+          type="submit" 
+          class="btn submit-btn" 
+          style="
+            background-color: #4B72FA; /* Example button color */
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+          "
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+    <!-- End Contact Form -->
+
+    <!-- Confirmation Message -->
+    <div 
+      id="formConfirmation" 
+      class="form-confirmation hidden" 
+      style="
+        margin-top: 1rem; 
+        display: none; 
+        color: green; 
+        text-align: center;
+      "
+    >
+      <p>Thank you! Your message has been sent successfully.</p>
+    </div>
+  </div>
+</section>
+<!-- ================== CyberLifeCoach Contact Form End ================== -->

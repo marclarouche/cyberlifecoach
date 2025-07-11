@@ -1,0 +1,85 @@
+/* =========================================================
+   Courses Section Styles (similar to Assessments)
+========================================================= */
+.courses {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.courses h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.courses p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.course-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.course-card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.course-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.course-card .btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.course-card .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card {
+        width: 90%;
+    }
+}

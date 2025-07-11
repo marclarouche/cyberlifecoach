@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PCI-DSS Implementation Tool - CyberLife Coach</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Google Fonts (optional for better typography) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+    />
+    <!-- Font Awesome for icons (optional) -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnH1z7L+RZ1Q0YH3DXqMhk0svLJ0tEERx6aKqRdSclq8R+53y2pQeUTcE3Kk5f1BSnURCj1RQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f1f1f1;
+        }
+        td input,
+        td select,
+        td textarea {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        td textarea {
+            resize: vertical; /* Allows resizing the textarea vertically */
+        }
+        .download-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .download-btn button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .print-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .print-btn button {
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            color: #27ae60;
+        }
+        /* Print-specific styles */
+        @media print {
+            textarea {
+                white-space: pre-wrap; /* Ensures line breaks are preserved */
+                overflow: visible; /* Makes sure long comments are fully visible */
+                height: auto; /* Allows the textarea to expand to show content */
+                max-width: 100%;
+            }
+        }
+        /* New Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #ffffff;
+        }
+        header .logo:hover {
+            color: #1f6391; /* Hover color */
+        }
+        nav ul {
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            list-style: none;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #27ae60;
+        }
+        /* Responsive Navigation */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        /* Milestone dropdown color classes */
+        .milestone-dropdown {
+            border-radius: 5px;
+        }
+        .milestone-1 {
+            background-color: pink !important;
+        }
+        .milestone-2 {
+            background-color: yellow !important;
+        }
+        .milestone-3 {
+            background-color: lightgreen !important;
+        }
+        .milestone-4 {
+            background-color: lightcoral !important;
+        }
+        .milestone-5 {
+            background-color: blue !important;
+            color: #fff;
+        }
+        .milestone-6 {
+            background-color: orange !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">CyberLifeCoach</a>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>PCI-DSS Implementation Tool</h1>
+        <h2>Fill in the Information Below:</h2>
+        <table id="pciTable">
+            <thead>
+                <tr>
+                    <th>PCI-DSS Requirement</th>
+                    <th>Milestone</th>
+                    <th>Status</th>
+                    <th>Stage of Implementation</th>
+                    <th>Estimated Date of Completion</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 1.1.1 -->
+                <tr>
+                    <td>1.1.1 A formal process for approving and testing all network connections and changes to the firewall and router configurations.</td>
+                    <td>
+                        <select name="milestone1" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status1" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage1">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion1" /></td>
+                    <td><textarea name="comments1" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.1.2 -->
+                <tr>
+                    <td>1.1.2 Current network diagram that identifies all connections between the cardholder data environment and other networks, including any wireless networks.</td>
+                    <td>
+                        <select name="milestone2" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status2" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage2">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion2" /></td>
+                    <td><textarea name="comments2" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.1.3 -->
+                <tr>
+                    <td>1.1.3 Current diagram that shows all cardholder data flows across systems and networks.</td>
+                    <td>
+                        <select name="milestone3" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status3" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage3">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion3" /></td>
+                    <td><textarea name="comments3" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.1.4 -->
+                <tr>
+                    <td>1.1.4 Requirements for a firewall at each Internet connection and between any demilitarized zone (DMZ) and the internal network zone.</td>
+                    <td>
+                        <select name="milestone4" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status4" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage4">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion4" /></td>
+                    <td><textarea name="comments4" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.1.5 -->
+                <tr>
+                    <td>1.1.5 Description of groups, roles, and responsibilities for management of network components.</td>
+                    <td>
+                        <select name="milestone5" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status5" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage5">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion5" /></td>
+                    <td><textarea name="comments5" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.1.6 -->
+                <tr>
+                    <td>1.1.6 Documentation of business justification and approval for use of all services, protocols, and ports allowed, including documentation of security features implemented for those protocols considered to be insecure.</td>
+                    <td>
+                        <select name="milestone6" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status6" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage6_1">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion6_1" /></td>
+                    <td><textarea name="comments6_1" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.1.7 -->
+                <tr>
+                    <td>1.1.7 Requirement to review firewall and router rule sets at least every six months.</td>
+                    <td>
+                        <select name="milestone7" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status7" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage7">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion7" /></td>
+                    <td><textarea name="comments7" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.2 -->
+                <tr>
+                    <td>1.2 Build firewall and router configurations that restrict connections between untrusted networks and any system components in the cardholder data environment. <strong>Note:</strong> An “untrusted network” is any network that is external to the networks belonging to the entity under review, and/or which is out of the entity's ability to control or manage.</td>
+                    <td>
+                        <!-- The original had "milestone-0", let's default to no milestone color or pick a default. -->
+                        <select name="milestone8" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status8" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage8">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion8" /></td>
+                    <td><textarea name="comments8" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.2.1 -->
+                <tr>
+                    <td>1.2.1 Restrict inbound and outbound traffic to that which is necessary for the cardholder data environment, and specifically deny all other traffic.</td>
+                    <td>
+                        <select name="milestone9" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status9" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage9">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion9" /></td>
+                    <td><textarea name="comments9" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.2.2 -->
+                <tr>
+                    <td>1.2.2 Secure and synchronize router configuration files.</td>
+                    <td>
+                        <select name="milestone10" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status10" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage10">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion10" /></td>
+                    <td><textarea name="comments10" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.2.3 -->
+                <tr>
+                    <td>1.2.3 Install perimeter firewalls between all wireless networks and the cardholder data environment, and configure these firewalls to deny or, if traffic is necessary for business purposes, permit only authorized traffic between the wireless environment and the cardholder data environment.</td>
+                    <td>
+                        <select name="milestone11" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status11" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage11">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion11" /></td>
+                    <td><textarea name="comments11" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3 -->
+                <tr>
+                    <td>1.3 Prohibit direct public access between the Internet and any system component in the cardholder data environment.</td>
+                    <td>
+                        <select name="milestone12" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status12" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage12">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion12" /></td>
+                    <td><textarea name="comments12" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3.1 -->
+                <tr>
+                    <td>1.3.1 Implement a DMZ to limit inbound traffic to only system components that provide authorized publicly accessible services, protocols, and ports.</td>
+                    <td>
+                        <select name="milestone13" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status13" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage13">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion13" /></td>
+                    <td><textarea name="comments13" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3.2 -->
+                <tr>
+                    <td>1.3.2 Limit inbound Internet traffic to IP addresses within the DMZ.</td>
+                    <td>
+                        <select name="milestone14" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status14" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage14">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion14" /></td>
+                    <td><textarea name="comments14" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3.3 -->
+                <tr>
+                    <td>1.3.3 Implement anti-spoofing measures to detect and block forged source IP addresses from entering the network. <strong>Note:</strong> (For example, block traffic originating from the Internet with an internal source address.)</td>
+                    <td>
+                        <select name="milestone15" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status15" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage15">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion15" /></td>
+                    <td><textarea name="comments15" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3.4 -->
+                <tr>
+                    <td>1.3.4 Do not allow unauthorized outbound traffic from the cardholder data environment to the Internet.</td>
+                    <td>
+                        <select name="milestone16" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status16" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage16">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion16" /></td>
+                    <td><textarea name="comments16" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3.5 -->
+                <tr>
+                    <td>1.3.5 Permit only “established” connections into the network.</td>
+                    <td>
+                        <select name="milestone17" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status17" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage17">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion17" /></td>
+                    <td><textarea name="comments17" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3.6 -->
+                <tr>
+                    <td>1.3.6 Place system components that store cardholder data (such as a database) in an internal network zone, segregated from the DMZ and other untrusted networks.</td>
+                    <td>
+                        <select name="milestone18" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status18" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage18">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion18" /></td>
+                    <td><textarea name="comments18" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.3.7 -->
+                <tr>
+                    <td>1.3.7 Do not disclose private IP addresses and routing information to unauthorized parties. <strong>Note:</strong> Methods to obscure IP addressing may include, but are not limited to:
+                        <ul>
+                            <li>Network Address Translation (NAT)</li>
+                            <li>Placing servers containing cardholder data behind proxy servers/firewalls</li>
+                            <li>Removal or filtering of route advertisements for private networks that employ registered addressing</li>
+                            <li>Internal use of RFC1918 address space instead of registered addresses</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <select name="milestone19" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status19" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage19">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion19" /></td>
+                    <td><textarea name="comments19" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.4 -->
+                <tr>
+                    <td>1.4 Install personal firewall software or equivalent functionality on any portable computing devices (including company and/or employee-owned) that connect to the Internet when outside the network (for example, laptops used by employees), and which are also used to access the CDE. Firewall (or equivalent) configurations include:
+                        <ul>
+                            <li>Specific configuration settings are defined.</li>
+                            <li>Personal firewall (or equivalent functionality) is actively running.</li>
+                            <li>Personal firewall (or equivalent functionality) is not alterable by users of the portable computing devices.</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <select name="milestone20" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option>
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status20" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage20">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion20" /></td>
+                    <td><textarea name="comments20" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+                <!-- 1.5 -->
+                <tr>
+                    <td>1.5 Ensure that security policies and operational procedures for managing firewalls are documented, in use, and known to all affected parties.</td>
+                    <td>
+                        <select name="milestone21" class="milestone-dropdown">
+                            <option value="" selected hidden>--Select--</option>
+                            <option value="1" class="milestone-1">1</option>
+                            <option value="2" class="milestone-2">2</option>
+                            <option value="3" class="milestone-3">3</option>
+                            <option value="4" class="milestone-4">4</option> 
+                            <option value="5" class="milestone-5">5</option>
+                            <option value="6" class="milestone-6">6</option>
+                        </select>
+                    </td>
+                    <td><textarea name="status21" placeholder="Enter status" rows="2"></textarea></td>
+                    <td>
+                        <select name="stage21">
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Implemented">Implemented</option>
+                        </select>
+                    </td>
+                    <td><input type="date" name="completion21" /></td>
+                    <td><textarea name="comments21" placeholder="Enter comments" rows="3"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="download-btn">
+            <button id="downloadXLS">Download as XLS</button>
+        </div>
+
+        <div class="download-btn">
+            <button onclick="downloadCSV()">Download CSV</button>
+            <button onclick="downloadJSON()">Download JSON</button>
+        </div>
+
+        <div class="print-btn">
+            <button onclick="window.print()">Print</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.3/jspdf.plugin.autotable.min.js"></script>
+    <script>
+        // Download as XLS
+        document.getElementById('downloadXLS').addEventListener('click', function() {
+            var wb = XLSX.utils.table_to_book(document.getElementById('pciTable'), {sheet: "PCI-DSS"});
+            XLSX.writeFile(wb, 'pci_dss_implementation_tool.xlsx');
+        });
+
+         // Function to download the table as CSV
+         function downloadCSV() {
+            let csv = [];
+            const rows = document.querySelectorAll("table tr");
+            rows.forEach(row => {
+                const cols = row.querySelectorAll("td, th");
+                const data = [];
+                cols.forEach(col => data.push(col.innerText));
+                csv.push(data.join(","));
+            });
+            const csvFile = new Blob([csv.join("\n")], { type: "text/csv" });
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(csvFile);
+            link.download = "pci_dss_implementation_tool.csv";
+            link.click();
+        }
+
+        <!-- Replace your current downloadJSON function with this one -->
+
+  function downloadJSON() {
+    const tableData = [];
+
+    // Select all table rows in the <tbody> of #pciTable
+    const rows = document.querySelectorAll("#pciTable tbody tr");
+
+    rows.forEach((row) => {
+      const columns = row.querySelectorAll("td");
+      if (columns.length === 6) {
+        const rowData = {};
+
+        // Column 0: Requirement (plain text)
+        rowData["Requirement"] = columns[0].innerText.trim();
+
+        // Column 1: Milestone (from <select>)
+        const milestoneSelect = columns[1].querySelector("select");
+        rowData["Milestone"] = milestoneSelect ? milestoneSelect.value : "";
+
+        // Column 2: Status (from <input> or <textarea>)
+        const statusInput = columns[2].querySelector("input, textarea");
+        rowData["Status"] = statusInput ? statusInput.value.trim() : "";
+
+        // Column 3: Stage (from <select>)
+        const stageSelect = columns[3].querySelector("select");
+        rowData["Stage"] = stageSelect ? stageSelect.value : "";
+
+        // Column 4: Completion Date (from <input type="date">)
+        const dateInput = columns[4].querySelector("input[type='date']");
+        rowData["Completion Date"] = dateInput ? dateInput.value : "";
+
+        // Column 5: Comments (from <textarea>)
+        const commentsTextarea = columns[5].querySelector("textarea");
+        rowData["Comments"] = commentsTextarea ? commentsTextarea.value.trim() : "";
+
+        tableData.push(rowData);
+      }
+    });
+
+    // Convert the array of row objects to JSON
+    const json = JSON.stringify(tableData, null, 2);
+
+    // Create and download the JSON file
+    const blob = new Blob([json], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "pci_dss_implementation_tool.json";
+    link.click();
+  }
+
+
+ // Function to dynamically update the milestone color
+ function setMilestoneColor(selectEl) {
+    // Remove all milestone color classes
+    selectEl.classList.remove(
+        'milestone-1',
+        'milestone-2',
+        'milestone-3',
+        'milestone-4',
+        'milestone-5',
+        'milestone-6'
+    );
+
+    // Only apply a class if the value is not empty
+    if (selectEl.value) {
+        selectEl.classList.add('milestone-' + selectEl.value);
+    }
+}
+
+    // Attach the function to every milestone dropdown
+document.querySelectorAll('.milestone-dropdown').forEach(dropdown => {
+  // Initialize color on page load
+  setMilestoneColor(dropdown);
+
+  // Update color on change
+  dropdown.addEventListener('change', () => setMilestoneColor(dropdown));
+});
+    </script>
+</body>
+</html>
