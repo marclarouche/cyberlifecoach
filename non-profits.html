@@ -21,7 +21,7 @@
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
-      color: #b21f2d;
+      color: #005f73;
     }
     h2 {
       font-weight: 400;
@@ -65,7 +65,7 @@
       border-radius: 6px;
     }
     .form button {
-      background: #b21f2d;
+      background: #005f73;
       color: white;
       border: none;
       padding: 0.75rem 1.5rem;
@@ -118,7 +118,8 @@
       <form action="#" method="post">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
-        <button type="submit">👉 Get the Free Guide</button>
+  <!--  <button type="submit">👉 Get the Free Guide</button> -->
+        <button type="button" id="downloadBtn">👉 Get the Guide</button>
         <p>We respect your inbox. No spam ever.</p>
       </form>
     </div>
@@ -132,5 +133,12 @@
       <p>🔵 <a href="https://bsky.app/profile/cyberlifecoach.bsky.social" target="_blank">Follow Me on BlueSky → @cyberlifecoach.bsky.social</a></p>
     </div>
   </div>
+
+    <script>
+     document.getElementById('downloadBtn').addEventListener('click', function() {
+  window.location.href = 'https://cyberlifecoach.gumroad.com/l/nonprofit-blueprint';
+});    
+  </script>
+
 </body>
 </html>

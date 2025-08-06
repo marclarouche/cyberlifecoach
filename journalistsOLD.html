@@ -21,7 +21,7 @@
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
-      color: #005f73;
+      color: #003049;
     }
     h2 {
       font-weight: 400;
@@ -55,16 +55,22 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
-      text-align: center;
     }
-.form .gumroad-button {
-      display: inline-block;
-      background: #005f73;
-      color: #ffffff !important;
+    .form input[type="text"],
+    .form input[type="email"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .form button {
+      background: #003049;
+      color: white;
+      border: none;
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
       font-size: 1rem;
-      text-decoration: none;
       cursor: pointer;
     }
     .form p {
@@ -83,7 +89,7 @@
       color: #666;
     }
     .footer a {
-      color: #b21f2d;
+      color: #003049;
       text-decoration: none;
     }
   </style>
@@ -104,41 +110,23 @@
         <li>🧰 Tools for encrypted messaging, secure backups, and threat modeling</li>
         <li>🗂️ Built for journalists, activists, and investigators in the field</li>
         <li>🌍 Includes travel safety, border security, and emergency protocols</li>
-        <li>📋 No jargon—just a focused, 84-page guide built for real-world use</li>
+        <li>📋 No jargon—just a focused, 5-page guide built for real-world use</li>
       </ul>
     </div>
-  <div class="form">
-      <a
-        class="gumroad-button"
-        href="https://cyberlifecoach.gumroad.com/l/thejounralistfirewallpe"
-      >
-        👉 Get the Guide
-      </a>
-      <p>We respect your inbox. No spam ever.</p>
-    </div>
 
-    <!--
     <div class="form">
-      <form id="emailForm">
+      <form action="#" method="post">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <button type="submit">👉 Get the Free Toolkit</button>
         <p>No spam. Unsubscribe anytime.</p>
       </form>
     </div>
--->
+
     <div class="testimonial">
       💬 “A must-have for any journalist traveling with sensitive material.” — Lina M., Investigative Reporter
     </div>
 
     <div class="footer">
       <p>Want ongoing digital safety tips for journalists? Stay subscribed to the CyberLife Coach Security Bulletin—or unsubscribe anytime.</p>
-      <p>🔵 <a href="https://bsky.app/profile/cyberlifecoach.bsky.social" target="_blank">Follow Me on BlueSky → @cyberlifecoach.bsky.social</a></p>
-      <p> 🔗 <a href="https://cyberlifecoach.substack.com" target="_blank">Follow Me on Substack → @cyberlifecoach.substack.com</a></p>
-    </div>
-  </div>
-
-  <!-- Gumroad widget (loads the modal for email capture & delivery) -->
-  <script src="https://gumroad.com/js/gumroad.js"></script>
-</body>
-</html>
+      <p>🔵 <a href="https://bsky.app/profile/cyberlifecoach.bsky.social" target="_blank">Follow Me on BlueSky → @cyberlifecoach.bs

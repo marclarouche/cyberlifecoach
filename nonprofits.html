@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journalist Security Toolkit</title>
+  <title>Donor Data Defense: Guide for Nonprofits</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
-      background: #fcfcfc;
+      background: #fdfdfd;
       color: #1e1e1e;
     }
     .container {
@@ -21,7 +21,7 @@
     h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
-      color: #003049;
+      color: #005f73;
     }
     h2 {
       font-weight: 400;
@@ -55,22 +55,16 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       margin-bottom: 2rem;
+      text-align: center;
     }
-    .form input[type="text"],
-    .form input[type="email"] {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    .form button {
-      background: #003049;
-      color: white;
-      border: none;
+    .form .gumroad-button {
+      display: inline-block;
+      background: #005f73;
+      color: #ffffff !important;
       padding: 0.75rem 1.5rem;
       border-radius: 6px;
       font-size: 1rem;
+      text-decoration: none;
       cursor: pointer;
     }
     .form p {
@@ -89,56 +83,52 @@
       color: #666;
     }
     .footer a {
-      color: #003049;
+      color: #b21f2d;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Protect Sources. Safeguard Stories.</h1>
-    <h2>Free Download: Journalist Security Toolkit</h2>
+    <h1>Protect Donor Trust—Without Breaking the Budget</h1>
+    <h2>Free Quick-Start Guide: Donor Data Defense for Nonprofits</h2>
 
     <div class="hero">
-      <img src="journalist-toolkit-cover.jpg" alt="Journalist Security Toolkit Cover" />
+      <img src="donor-guide-cover.jpg" alt="Donor Data Defense Guide Cover" />
       <p><em>Instant Download PDF</em></p>
     </div>
 
     <div class="benefits">
       <ul>
-        <li>🕵️‍♂️ Practical steps to secure your devices, communications, and files</li>
-        <li>🧰 Tools for encrypted messaging, secure backups, and threat modeling</li>
-        <li>🗂️ Built for journalists, activists, and investigators in the field</li>
-        <li>🌍 Includes travel safety, border security, and emergency protocols</li>
-        <li>📋 No jargon—just a focused, 5-page guide built for real-world use</li>
+        <li>🛡️ Learn why donor data security is essential (even for small orgs)</li>
+        <li>🧰 Discover free and discounted tools available via TechSoup</li>
+        <li>📋 Get a plug-and-play checklist for securing your donor systems</li>
+        <li>🧑‍🏫 Built for executive directors, fundraisers, and volunteer IT staff</li>
+        <li>💡 Boost trust with your supporters and comply with data standards</li>
       </ul>
     </div>
 
     <div class="form">
-      <form id="emailForm">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <button type="submit">👉 Get the Free Toolkit</button>
-        <p>No spam. Unsubscribe anytime.</p>
-      </form>
+      <a
+        class="gumroad-button"
+        href="https://cyberlifecoach.gumroad.com/l/nonprofit-blueprint"
+      >
+        👉 Get the Guide
+      </a>
+      <p>We respect your inbox. No spam ever.</p>
     </div>
 
     <div class="testimonial">
-      💬 “A must-have for any journalist traveling with sensitive material.” — Lina M., Investigative Reporter
+      💬 “This guide made it easy for our team to take action without hiring an IT firm.” — Cynthia, Nonprofit ED
     </div>
 
     <div class="footer">
-      <p>Want ongoing digital safety tips for journalists? Stay subscribed to the CyberLife Coach Security Bulletin—or unsubscribe anytime.</p>
+      <p>Want monthly nonprofit-friendly privacy tips? Stay subscribed to the CyberLife Coach Security Bulletin—or unsubscribe anytime.</p>
       <p>🔵 <a href="https://bsky.app/profile/cyberlifecoach.bsky.social" target="_blank">Follow Me on BlueSky → @cyberlifecoach.bsky.social</a></p>
     </div>
   </div>
 
-  <script>
-    document.getElementById('emailForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      // Optionally collect form data here for processing
-      window.location.href = 'https://cyberlifecoach.gumroad.com/l/nonprofit-blueprint';
-    });
-  </script>
+  <!-- Gumroad widget (loads the modal for email capture & delivery) -->
+  <script src="https://gumroad.com/js/gumroad.js"></script>
 </body>
 </html>
