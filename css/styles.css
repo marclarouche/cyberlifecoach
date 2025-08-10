@@ -116,7 +116,7 @@ nav {
 /* Hero Section Styles */
 .hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     align-items: center;
     color: #fff;

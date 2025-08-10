@@ -1,0 +1,147 @@
+/* ===== Shared Landing Styles (Digital Nomads, Nonprofits, Retirees, Journalists) ===== */
+
+/* Layout */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdfdfd;
+  color: #1e1e1e;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Headings in main content */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #005f73;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Hero Banner (matches homepage visuals) ===== */
+.hero {
+  background-image: url("../images/maxresdefault.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 2rem 1rem;
+  min-height: 260px;          /* normalize height */
+  display: flex;
+  align-items: center;        /* center overlay vertically */
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay for readability */
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem;
+}
+
+.hero p {
+  font-size: 1.125rem;
+  margin: 0 0 1rem;
+}
+
+.hero-content h1,
+.hero-content p {
+  color: white;
+}
+
+/* ===== Cover image block inside the page content ===== */
+.hero-img {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ===== Benefits, Form, Footer ===== */
+.benefits { margin-bottom: 2rem; }
+.benefits ul { padding-left: 1.2rem; }
+.benefits li { margin-bottom: 0.8rem; line-height: 1.5; }
+
+.form {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form .gumroad-button {
+  display: inline-block;
+  background: #005f73;
+  color: #ffffff !important;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form p { font-size: 0.875rem; color: #666; margin-top: 0.5rem; }
+
+.testimonial { font-style: italic; margin-bottom: 2rem; color: #333; }
+
+.footer {
+  font-size: 0.875rem;
+  text-align: center;
+  color: #666;
+  padding-bottom: 2rem;
+}
+
+.footer a { color: #b21f2d; text-decoration: none; }
+/* Compact, non-Gumroad-styled CTA */
+.badge-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid #005f73;
+  border-radius: 999px;
+  background: transparent;
+  color: #005f73;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.badge-cta::before {
+  content: "✔️";
+  font-size: 1rem;
+}
+
+.badge-cta:hover {
+  background: #005f73;
+  color: #fff;
+}
+
+/* Optional: keep it near the subtitle with consistent spacing */
+.inline-cta {
+  margin: 0.75rem 0 1.25rem;
+}
